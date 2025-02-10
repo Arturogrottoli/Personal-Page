@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import styles from "./page.module.css"
-import { Download, Github, Linkedin, BarChart2, Smartphone, GraduationCap, Code, Briefcase } from "lucide-react"
+import { Download, Github, Linkedin, BarChart2, Smartphone, GraduationCap, Code, Briefcase, Globe } from "lucide-react"
 import Image from "next/image"
+import { translations } from "./translations"
 import {
   siHtml5,
   siCss3,
@@ -34,55 +35,67 @@ const TechIcon = ({ icon, name }: { icon: any; name: string }) => (
 
 export default function Home() {
   const [openSection, setOpenSection] = useState<string | null>(null)
+  const [language, setLanguage] = useState<"es" | "en">("es")
 
   const toggleSection = (section: string) => {
     setOpenSection(openSection === section ? null : section)
   }
 
+  const toggleLanguage = () => {
+    setLanguage(language === "es" ? "en" : "es")
+  }
+
+  const t = translations[language]
+
   const portfolioItems = [
     {
       title: "E-commerce Platform",
       description: "A fully responsive online store built with React and Node.js",
-      image: "/placeholder.svg?height=150&width=250",
+      image: "https://via.placeholder.com/250x150.png?text=E-commerce+Platform",
       link: "https://example-ecommerce.com",
       technologies: "React, Node.js, MongoDB",
     },
     {
       title: "Task Management App",
       description: "A productivity app developed using Vue.js and Firebase",
-      image: "/placeholder.svg?height=150&width=250",
+      image: "https://via.placeholder.com/250x150.png?text=Task+Management+App",
       link: "https://example-taskapp.com",
       technologies: "Vue.js, Firebase, Vuex",
     },
     {
       title: "Weather Dashboard",
       description: "Real-time weather information app using Angular and OpenWeatherMap API",
-      image: "/placeholder.svg?height=150&width=250",
+      image: "https://via.placeholder.com/250x150.png?text=Weather+Dashboard",
       link: "https://example-weather.com",
       technologies: "Angular, TypeScript, RxJS",
     },
     {
       title: "Fitness Tracker",
       description: "A mobile app for tracking workouts and nutrition",
-      image: "/placeholder.svg?height=150&width=250",
+      image: "https://via.placeholder.com/250x150.png?text=Fitness+Tracker",
       link: "https://example-fitnesstracker.com",
       technologies: "React Native, Redux, Firebase",
     },
     {
       title: "Social Media Dashboard",
       description: "An analytics dashboard for social media managers",
-      image: "/placeholder.svg?height=150&width=250",
+      image: "https://via.placeholder.com/250x150.png?text=Social+Media+Dashboard",
       link: "https://example-socialdashboard.com",
       technologies: "Next.js, Chart.js, TailwindCSS",
     },
     {
-      title: "CoderVision",
-      description: "Plataforma de peliculas y series",
-      image: "/placeholder.svg?height=150&width=250",
-      link: "https://codervision.netlify.app/",
-      technologies: "Html, Css, Js, Bootstrap",
+      title: "Online Learning Platform",
+      description: "A platform for creating and taking online courses",
+      image: "https://via.placeholder.com/250x150.png?text=Online+Learning+Platform",
+      link: "https://example-elearning.com",
+      technologies: "Django, React, PostgreSQL",
     },
   ]
+
+  const cvLinks = {
+    es: "/cv-arturo-grottoli-es.pdf",
+    en: "/cv-arturo-grottoli-en.pdf",
+  }
 
   return (
     <main className={styles.main}>
@@ -96,39 +109,46 @@ export default function Home() {
 /_/   \\_\\_| \\_\\|_|  \\___/|_| \\_\\\\___/     \\____|_| \\_\\\\___/ |_|   |_| \\___/|_____|___|
 `}
         </pre>
-        <div className={`${styles.logo} ${styles.logoMobile}`}>AG</div>
+        <div className={styles.logoContainer}>
+          <div className={`${styles.logo} ${styles.logoMobile}`}>AG</div>
+          <button onClick={toggleLanguage} className={styles.languageToggle}>
+            <Globe size={18} />
+            {language === "es" ? "EN" : "ES"}
+          </button>
+        </div>
       </div>
 
       <div className={styles.content}>
         <div className={styles.separator}>
-          ============================================================================================================================================
+          =====================================================================================================================
         </div>
-        <h2>Hola, soy Arturo, profesional IT con experiencia en programación y telecomunicaciones</h2>
+        <h2>{t.title}</h2>
         <div className={styles.separator}>
-          ==========================================================================================================================================
+          ================================================================================
         </div>
 
-        <h3>Trayectoria:</h3>
+        <h3>{t.career}</h3>
         <ul>
           <li>
             <button onClick={() => toggleSection("fullstack")} className={styles.sectionToggle}>
               <span>
-                - Programador Full Stack <Code size={18} />
+                - {t.fullstack} <Code size={18} />
               </span>
             </button>
             {openSection === "fullstack" && (
               <div className={styles.sectionContent}>
-                <p>
-                  Desarrollador web especializado en la creación de aplicaciones web completas, implementando soluciones
-                  eficientes y escalables.
-                </p>
+                <p>{t.fullstackDesc}</p>
                 <ul>
-                  <li>{">"}Emonk (2022-actual) - E-commerce admin, programador full stack.</li>
                   <li>
-                    {">"}Freelance (2020-actual) - Desarrollo de sitios web personalizados para diversos clientes.
+                    {">"}
+                    {t.emonkJob}
+                  </li>
+                  <li>
+                    {">"}
+                    {t.freelanceJob}
                   </li>
                 </ul>
-                <p>Tecnologías:</p>
+                <p>{t.technologies}</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "10px" }}>
                   <TechIcon icon={siHtml5} name="HTML5" />
                   <TechIcon icon={siCss3} name="CSS3" />
@@ -147,19 +167,42 @@ export default function Home() {
               </div>
             )}
           </li>
-          
+          <li>
+            <button onClick={() => toggleSection("dataAnalyst")} className={styles.sectionToggle}>
+              <span>
+                - {t.dataAnalyst} <BarChart2 size={18} />
+              </span>
+            </button>
+            {openSection === "dataAnalyst" && (
+              <div className={styles.sectionContent}>
+                <p>{t.dataAnalystDesc}</p>
+                <ul>
+                  <li>
+                    {">"}
+                    {t.liramaticJob}
+                  </li>
+                </ul>
+              </div>
+            )}
+          </li>
           <li>
             <button onClick={() => toggleSection("teacher")} className={styles.sectionToggle}>
               <span>
-                - Docente <GraduationCap size={18} />
+                - {t.teacher} <GraduationCap size={18} />
               </span>
             </button>
             {openSection === "teacher" && (
               <div className={styles.sectionContent}>
-                <p>Instructor y mentor en diversos lenguajes de programación:</p>
+                <p>{t.teacherDesc}</p>
                 <ul>
-                  <li>{">"}Profesor curso Full Stack Python Codo a codo (2021-2023)</li>
-                  <li>{">"}Tutor coderhouse Desarrollo web, javascript, reactjs y SQL (2021-actualidad)</li>
+                  <li>
+                    {">"}
+                    {t.codoacodoJob}
+                  </li>
+                  <li>
+                    {">"}
+                    {t.coderhouseJob}
+                  </li>
                 </ul>
               </div>
             )}
@@ -167,19 +210,14 @@ export default function Home() {
           <li>
             <button onClick={() => toggleSection("telecom")} className={styles.sectionToggle}>
               <span>
-                - <span className={styles.desktopOnly}>Profesional de las Telecomunicaciones</span>
-                <span className={styles.mobileOnly}>PM Telecomunicaciones</span>
+                - <span className={styles.desktopOnly}>{t.telecom}</span>
+                <span className={styles.mobileOnly}>{t.telecomMobile}</span>
                 <Smartphone size={18} />
               </span>
             </button>
             {openSection === "telecom" && (
               <div className={styles.sectionContent}>
-                <p>
-                  Gestión de proyectos en instalación de redes 3G y 4G, y mantenimiento de sitios. Experiencia en
-                  optimización de redes, implementación de nuevas tecnologías y coordinación de equipos
-                  multidisciplinarios para garantizar la máxima calidad y cobertura de servicio. Colaboración con
-                  clientes multinacionales líderes en la industria, incluyendo Ericsson, Nokia y Huawei.
-                </p>
+                <p>{t.telecomDesc}</p>
                 <ul>
                   <li>{">"}SOTO COMUNICACIONES (2018-2020)</li>
                   <li>{">"}BOOT ARGENTINA (2014-2018)</li>
@@ -188,44 +226,25 @@ export default function Home() {
             )}
           </li>
           <li>
-            <button onClick={() => toggleSection("dataAnalyst")} className={styles.sectionToggle}>
-              <span>
-                - Analista de Datos <BarChart2 size={18} />
-              </span>
-            </button>
-            {openSection === "dataAnalyst" && (
-              <div className={styles.sectionContent}>
-                <p>
-                  Experiencia en análisis y procesamiento de grandes volúmenes de información, utilizando SQL y Python
-                  para la manipulación y visualización de datos.
-                </p>
-                <ul>
-                  <li>
-                    {">"}Liramatic (2021-actual) - Generación de reportes para flotas vehiculares mediante tableros
-                    Power BI.
-                  </li>
-                </ul>
-              </div>
-            )}
-          </li>
-          <li>
             <button onClick={() => toggleSection("portfolio")} className={styles.sectionToggle}>
               <span>
-                - Portfolio <Briefcase size={18} />
+                - {t.portfolio} <Briefcase size={18} />
               </span>
             </button>
             {openSection === "portfolio" && (
               <div className={styles.sectionContent}>
-                <p>Proyectos destacados:</p>
+                <p>{t.featuredProjects}</p>
                 <div className={styles.portfolioGrid}>
                   {portfolioItems.map((item, index) => (
                     <div key={index} className={styles.portfolioItem}>
                       <Image src={item.image || "/placeholder.svg"} alt={item.title} width={250} height={150} />
                       <h4>{item.title}</h4>
                       <p>{item.description}</p>
-                      <p>Tecnologías: {item.technologies}</p>
+                      <p>
+                        {t.technologies} {item.technologies}
+                      </p>
                       <a href={item.link} target="_blank" rel="noopener noreferrer">
-                        Ver proyecto
+                        {t.viewProject}
                       </a>
                     </div>
                   ))}
@@ -236,14 +255,14 @@ export default function Home() {
         </ul>
 
         <div className={styles.buttons}>
-          <button className={styles.downloadBtn}>
-            <span>Download CV</span>
+          <a href={cvLinks[language]} target="_blank" rel="noopener noreferrer" className={styles.downloadBtn}>
+            <span>{t.downloadCV}</span>
             <Download size={18} />
-          </button>
+          </a>
         </div>
 
         <div className={styles.socialLinks}>
-          <h3>RRSS:</h3>
+          <h3>{t.socialLinks}</h3>
           <a href="https://github.com/Arturogrottoli" target="_blank" rel="noopener noreferrer">
             <Github size={24} />
           </a>
@@ -253,7 +272,7 @@ export default function Home() {
         </div>
 
         <div className={styles.contactInfo}>
-          <span>Contacto: arturogrottoli@gmail.com</span>
+          <span>{t.contact} arturogrottoli@gmail.com</span>
         </div>
       </div>
     </main>
