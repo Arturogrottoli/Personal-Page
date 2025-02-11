@@ -355,15 +355,16 @@
 }
 
 .mobileOnly {
-  display: none;
+  display: none !important;
 }
+
 
 @media (max-width: 768px) {
   .desktopOnly {
-    display: none;
+    display: none!important;
   }
   .mobileOnly {
-    display: inline;
+    display: block !important;
   }
 }
 

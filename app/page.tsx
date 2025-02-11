@@ -70,25 +70,25 @@ export default function Home() {
       technologies: "Angular, TypeScript, RxJS",
     },
     {
-      title: "Fitness Tracker",
+      title: "Reftel",
       description: "A mobile app for tracking workouts and nutrition",
       image: "https://via.placeholder.com/250x150.png?text=Fitness+Tracker",
       link: "https://example-fitnesstracker.com",
-      technologies: "React Native, Redux, Firebase",
+      technologies: "Html, Css, Javascript, Bootstrap",
     },
     {
-      title: "Social Media Dashboard",
+      title: "CoderVision",
       description: "An analytics dashboard for social media managers",
       image: "https://via.placeholder.com/250x150.png?text=Social+Media+Dashboard",
       link: "https://example-socialdashboard.com",
-      technologies: "Next.js, Chart.js, TailwindCSS",
+      technologies: "Html, Css, Javascript, Bootstrap",
     },
     {
-      title: "Online Learning Platform",
-      description: "A platform for creating and taking online courses",
+      title: "Mija, baby carrier backpack",
+      description: "Real project for the Mija venture through CoderHouse.",
       image: "https://via.placeholder.com/250x150.png?text=Online+Learning+Platform",
-      link: "https://example-elearning.com",
-      technologies: "Django, React, PostgreSQL",
+      link: "arturogrottoli.github.io/Mija/",
+      technologies: "Html, Css, Javascript, Bootstrap",
     },
   ]
 
@@ -120,11 +120,11 @@ export default function Home() {
 
       <div className={styles.content}>
         <div className={styles.separator}>
-          =====================================================================================================================
+          ===============================================================================================================================================
         </div>
         <h2>{t.title}</h2>
         <div className={styles.separator}>
-          ================================================================================
+          ====================================================================================================================================================
         </div>
 
         <h3>{t.career}</h3>
@@ -167,24 +167,7 @@ export default function Home() {
               </div>
             )}
           </li>
-          <li>
-            <button onClick={() => toggleSection("dataAnalyst")} className={styles.sectionToggle}>
-              <span>
-                - {t.dataAnalyst} <BarChart2 size={18} />
-              </span>
-            </button>
-            {openSection === "dataAnalyst" && (
-              <div className={styles.sectionContent}>
-                <p>{t.dataAnalystDesc}</p>
-                <ul>
-                  <li>
-                    {">"}
-                    {t.liramaticJob}
-                  </li>
-                </ul>
-              </div>
-            )}
-          </li>
+          
           <li>
             <button onClick={() => toggleSection("teacher")} className={styles.sectionToggle}>
               <span>
@@ -207,6 +190,7 @@ export default function Home() {
               </div>
             )}
           </li>
+          
           <li>
             <button onClick={() => toggleSection("telecom")} className={styles.sectionToggle}>
               <span>
@@ -221,6 +205,24 @@ export default function Home() {
                 <ul>
                   <li>{">"}SOTO COMUNICACIONES (2018-2020)</li>
                   <li>{">"}BOOT ARGENTINA (2014-2018)</li>
+                </ul>
+              </div>
+            )}
+          </li>
+          <li>
+            <button onClick={() => toggleSection("dataAnalyst")} className={styles.sectionToggle}>
+              <span>
+                - {t.dataAnalyst} <BarChart2 size={18} />
+              </span>
+            </button>
+            {openSection === "dataAnalyst" && (
+              <div className={styles.sectionContent}>
+                <p>{t.dataAnalystDesc}</p>
+                <ul>
+                  <li>
+                    {">"}
+                    {t.liramaticJob}
+                  </li>
                 </ul>
               </div>
             )}

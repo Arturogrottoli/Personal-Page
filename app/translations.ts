@@ -8,7 +8,7 @@ export const translations = {
     dataAnalystDesc:
       "Experiencia en análisis y procesamiento de grandes volúmenes de información, utilizando SQL y Python para la manipulación y visualización de datos.",
     teacher: "Docente",
-    teacherDesc: "Instructor y mentor en diversos lenguajes de programación:",
+    teacherDesc: "Instructor y tutor en diversos lenguajes de programación:",
     telecom: "Profesional de las Telecomunicaciones",
     telecomMobile: "PM Telecomunicaciones",
     telecomDesc:
@@ -25,7 +25,7 @@ export const translations = {
     liramaticJob:
       "Liramatic (2021-actual) - Generación de reportes para flotas vehiculares mediante tableros Power BI.",
     codoacodoJob: "Profesor curso Full Stack Python Codo a codo (2021-2023)",
-    coderhouseJob: "Tutor coderhouse Desarrollo web, javascript, reactjs y SQL (2021-actualidad)",
+    coderhouseJob: "Tutor en Coderhouse para cursos Desarrollo web, javascript, reactjs y SQL (2021-actualidad)",
     featuredProjects: "Proyectos destacados:",
   },
   en: {
