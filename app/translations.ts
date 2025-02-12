@@ -16,7 +16,7 @@ export const translations = {
     portfolio: "Portfolio",
     downloadCV: "Descargar CV",
     contact: "Contacto:",
-    viewProject: "Ver proyecto",
+    viewProject: "Project",
     technologies: "Tecnologías:",
     career: "Trayectoria:",
     socialLinks: "RRSS:",

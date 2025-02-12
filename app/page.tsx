@@ -53,44 +53,69 @@ export default function Home() {
       description: "A fully responsive online store built with React and Node.js",
       image: "https://via.placeholder.com/250x150.png?text=E-commerce+Platform",
       link: "https://example-ecommerce.com",
-      technologies: "React, Node.js, MongoDB",
+      technologies: [
+        { icon: siReact, name: "React" },
+        { icon: siJavascript, name: "JavaScript" },
+      ],
     },
     {
       title: "Task Management App",
       description: "A productivity app developed using Vue.js and Firebase",
       image: "https://via.placeholder.com/250x150.png?text=Task+Management+App",
       link: "https://example-taskapp.com",
-      technologies: "Vue.js, Firebase, Vuex",
+      technologies: [
+        { icon: siJavascript, name: "JavaScript" },
+        
+      ],
     },
     {
       title: "Weather Dashboard",
       description: "Real-time weather information app using Angular and OpenWeatherMap API",
       image: "https://via.placeholder.com/250x150.png?text=Weather+Dashboard",
       link: "https://example-weather.com",
-      technologies: "Angular, TypeScript, RxJS",
+      technologies: [
+      
+        { icon: siJavascript, name: "JavaScript" },
+      ],
     },
     {
       title: "Reftel",
       description: "A mobile app for tracking workouts and nutrition",
       image: "https://via.placeholder.com/250x150.png?text=Fitness+Tracker",
       link: "https://example-fitnesstracker.com",
-      technologies: "Html, Css, Javascript, Bootstrap",
+      technologies: [
+        { icon: siHtml5, name: "HTML5" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siJavascript, name: "JavaScript" },
+        { icon: siBootstrap, name: "Bootstrap" }
+      ],
     },
     {
       title: "CoderVision",
       description: "An analytics dashboard for social media managers",
       image: "https://via.placeholder.com/250x150.png?text=Social+Media+Dashboard",
       link: "https://example-socialdashboard.com",
-      technologies: "Html, Css, Javascript, Bootstrap",
+      technologies: [
+        { icon: siHtml5, name: "HTML5" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siJavascript, name: "JavaScript" },
+        { icon: siBootstrap, name: "Bootstrap" }
+      ],
     },
     {
       title: "Mija, baby carrier backpack",
       description: "Real project for the Mija venture through CoderHouse.",
       image: "https://via.placeholder.com/250x150.png?text=Online+Learning+Platform",
-      link: "arturogrottoli.github.io/Mija/",
-      technologies: "Html, Css, Javascript, Bootstrap",
+      link: "https://arturogrottoli.github.io/Mija/",
+      technologies: [
+        { icon: siHtml5, name: "HTML5" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siJavascript, name: "JavaScript" },
+        { icon: siBootstrap, name: "Bootstrap" }
+      ],
     },
   ]
+  
 
   const cvLinks = {
     es: "/cv-arturo-grottoli-es.pdf",
@@ -237,19 +262,20 @@ export default function Home() {
               <div className={styles.sectionContent}>
                 <p>{t.featuredProjects}</p>
                 <div className={styles.portfolioGrid}>
-                  {portfolioItems.map((item, index) => (
-                    <div key={index} className={styles.portfolioItem}>
-                      <Image src={item.image || "/placeholder.svg"} alt={item.title} width={250} height={150} />
-                      <h4>{item.title}</h4>
-                      <p>{item.description}</p>
-                      <p>
-                        {t.technologies} {item.technologies}
-                      </p>
-                      <a href={item.link} target="_blank" rel="noopener noreferrer">
-                        {t.viewProject}
-                      </a>
-                    </div>
-                  ))}
+                {portfolioItems.map((item, index) => (
+  <div key={index} className={styles.portfolioItem}>
+    <img src={item.image} alt={item.title} />
+    <h3>{item.title}</h3>
+    <p>{item.description}</p>
+    <a href={item.link} target="_blank" rel="noopener noreferrer">Project</a>
+    <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+      {item.technologies.map((tech, i) => (
+        <TechIcon key={i} icon={tech.icon} name={tech.name} />
+      ))}
+    </div>
+  </div>
+))}
+
                 </div>
               </div>
             )}
