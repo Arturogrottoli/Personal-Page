@@ -19,6 +19,7 @@ import {
   siNextdotjs,
   siSass,
   siBootstrap,
+  siFirebase,
 } from "simple-icons"
 
 const TechIcon = ({ icon, name }: { icon: any; name: string }) => (
@@ -49,40 +50,59 @@ export default function Home() {
 
   const portfolioItems = [
     {
-      title: "E-commerce Platform",
-      description: "A fully responsive online store built with React and Node.js",
-      image: "https://via.placeholder.com/250x150.png?text=E-commerce+Platform",
-      link: "https://example-ecommerce.com",
-      technologies: [
+      title: "Ecommerce React",
+     description: "A productivity app developed using Vue.js and Firebase",
+     image: "https://via.placeholder.com/250x150.png?text=Task+Management+App",
+     link: "https://example-taskapp.com",
+     technologies: [
         { icon: siReact, name: "React" },
-        { icon: siJavascript, name: "JavaScript" },
-      ],
-    },
+       { icon: siCss3, name: "CSS3" },
+       { icon: siBootstrap, name: "Bootstrap" }
+       
+     ],
+   },
+   {
+    title: "Ecommerce React",
+   description: "A productivity app developed using Vue.js and Firebase",
+   image: "https://via.placeholder.com/250x150.png?text=Task+Management+App",
+   link: "https://example-taskapp.com",
+   technologies: [
+      { icon: siReact, name: "React" },
+     { icon: siCss3, name: "CSS3" },
+     { icon: siBootstrap, name: "Bootstrap" }
+     
+   ],
+ },
     {
-      title: "Task Management App",
+       title: "Ecommerce React",
       description: "A productivity app developed using Vue.js and Firebase",
       image: "https://via.placeholder.com/250x150.png?text=Task+Management+App",
       link: "https://example-taskapp.com",
       technologies: [
-        { icon: siJavascript, name: "JavaScript" },
+         { icon: siReact, name: "React" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siBootstrap, name: "Bootstrap" }
         
       ],
     },
     {
-      title: "Weather Dashboard",
-      description: "Real-time weather information app using Angular and OpenWeatherMap API",
-      image: "https://via.placeholder.com/250x150.png?text=Weather+Dashboard",
-      link: "https://example-weather.com",
+      title: "Ecommerce React",
+      description: "E-commerce of products fetched from a generic API.",
+      image: "https://i.postimg.cc/5yTTPYzS/ecommerce.png",
+      link: "possible-hook.surge.sh/",
       technologies: [
-      
-        { icon: siJavascript, name: "JavaScript" },
+         { icon: siReact, name: "React" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siBootstrap, name: "Bootstrap" }
+        
       ],
     },
+    
     {
-      title: "Reftel",
-      description: "A mobile app for tracking workouts and nutrition",
-      image: "https://via.placeholder.com/250x150.png?text=Fitness+Tracker",
-      link: "https://example-fitnesstracker.com",
+      title: "Reftel,Technological solutions",
+      description: "Intercom systems and VAR service applied to football.",
+      image: "https://i.postimg.cc/D02KrT72/reftel.png",
+      link: "https://reftelcomunicaciones.netlify.app/",
       technologies: [
         { icon: siHtml5, name: "HTML5" },
         { icon: siCss3, name: "CSS3" },
@@ -91,9 +111,22 @@ export default function Home() {
       ],
     },
     {
-      title: "CoderVision",
-      description: "An analytics dashboard for social media managers",
-      image: "https://via.placeholder.com/250x150.png?text=Social+Media+Dashboard",
+      title: "Casacas Futbol! Soccer tshirts ecommerce",
+      description: "Ecommerce of national team and club football jerseys",
+      image: "https://i.postimg.cc/mDnQMbY9/casacas.png",
+      link: "https://example-weather.com",
+      technologies: [
+      
+        { icon: siReact, name: "React" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siBootstrap, name: "Bootstrap" },
+        { icon: siFirebase, name: "Firebase" }
+      ],
+    },
+    {
+      title: "CoderVision, a new streaming",
+      description: "A new streaming service to watch your favorite series and movies.",
+      image: "https://i.postimg.cc/FsHfkvRC/codervision.png",
       link: "https://example-socialdashboard.com",
       technologies: [
         { icon: siHtml5, name: "HTML5" },
@@ -104,8 +137,8 @@ export default function Home() {
     },
     {
       title: "Mija, baby carrier backpack",
-      description: "Real project for the Mija venture through CoderHouse.",
-      image: "https://via.placeholder.com/250x150.png?text=Online+Learning+Platform",
+      description: "A real project for the Mija business through Coderhouse.",
+      image: "https://i.postimg.cc/C1JhwZjh/mija.png",
       link: "https://arturogrottoli.github.io/Mija/",
       technologies: [
         { icon: siHtml5, name: "HTML5" },
