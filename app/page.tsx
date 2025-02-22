@@ -3,7 +3,6 @@
 import { useState } from "react"
 import styles from "./page.module.css"
 import { Download, Github, Linkedin, BarChart2, Smartphone, GraduationCap, Code, Briefcase, Globe } from "lucide-react"
-import Image from "next/image"
 import { translations } from "./translations"
 import {
   siHtml5,
@@ -20,9 +19,15 @@ import {
   siSass,
   siBootstrap,
   siFirebase,
+  siTypescript,
+  siTailwindcss
 } from "simple-icons"
 
-const TechIcon = ({ icon, name }: { icon: any; name: string }) => (
+interface IconType {
+  path: string;
+}
+
+const TechIcon = ({ icon, name }: { icon: IconType; name: string }) => (
   <svg
     role="img"
     viewBox="0 0 24 24"
@@ -32,7 +37,8 @@ const TechIcon = ({ icon, name }: { icon: any; name: string }) => (
     <title>{name}</title>
     <path d={icon.path} />
   </svg>
-)
+);
+
 
 export default function Home() {
   const [openSection, setOpenSection] = useState<string | null>(null)
@@ -74,14 +80,16 @@ export default function Home() {
    ],
  },
     {
-       title: "Ecommerce React",
-      description: "A productivity app developed using Vue.js and Firebase",
-      image: "https://via.placeholder.com/250x150.png?text=Task+Management+App",
+       title: "Tu CryptoBro",
+      description: "An app to check cryptocurrency prices via an API",
+      image: "https://i.postimg.cc/5yTTPYzS/ecommerce.png",
       link: "https://example-taskapp.com",
       technologies: [
-         { icon: siReact, name: "React" },
-        { icon: siCss3, name: "CSS3" },
-        { icon: siBootstrap, name: "Bootstrap" }
+         
+     
+        { icon: siTypescript, name: "Typescript" },
+        { icon: siTailwindcss, name: "Tailwind" },
+        { icon: siReact, name: "React" },
         
       ],
     },
@@ -221,6 +229,9 @@ export default function Home() {
                   <TechIcon icon={siNextdotjs} name="Next.js" />
                   <TechIcon icon={siSass} name="Sass" />
                   <TechIcon icon={siBootstrap} name="Bootstrap" />
+                  <TechIcon icon={siTypescript} name="Typescript" />
+                  <TechIcon icon={siTailwindcss} name="Tailwind" />
+                  
                 </div>
               </div>
             )}
