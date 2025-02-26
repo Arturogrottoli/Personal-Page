@@ -68,14 +68,14 @@ export default function Home() {
      ],
    },
    {
-    title: "Ecommerce React",
-   description: "A productivity app developed using Vue.js and Firebase",
+    title: "Cliff Hostel",
+   description: "A surf hostel in Chapadmalal page, Next Js and Tailwind",
    image: "https://via.placeholder.com/250x150.png?text=Task+Management+App",
    link: "https://example-taskapp.com",
    technologies: [
-      { icon: siReact, name: "React" },
-     { icon: siCss3, name: "CSS3" },
-     { icon: siBootstrap, name: "Bootstrap" }
+     { icon: siTypescript, name: "Typescript" },
+        { icon: siTailwindcss, name: "Tailwind" },
+        { icon: siReact, name: "React" },
      
    ],
  },
