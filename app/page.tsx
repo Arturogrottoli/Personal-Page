@@ -58,7 +58,7 @@ export default function Home() {
     {
       title: "Ecommerce React",
      description: "A productivity app developed using Vue.js and Firebase",
-     image: "https://via.placeholder.com/250x150.png?text=Task+Management+App",
+     image: "https://i.postimg.cc/25hTjQhy/Captura-de-pantalla-2025-02-22-164023.png",
      link: "https://example-taskapp.com",
      technologies: [
         { icon: siReact, name: "React" },
@@ -70,7 +70,7 @@ export default function Home() {
    {
     title: "Cliff Hostel",
    description: "A surf hostel in Chapadmalal page, Next Js and Tailwind",
-   image: "https://via.placeholder.com/250x150.png?text=Task+Management+App",
+   image: "https://i.postimg.cc/RFPfDbH1/Captura.png",
    link: "https://example-taskapp.com",
    technologies: [
      { icon: siTypescript, name: "Typescript" },
@@ -82,7 +82,7 @@ export default function Home() {
     {
        title: "Tu CryptoBro",
       description: "An app to check cryptocurrency prices via an API",
-      image: "https://i.postimg.cc/5yTTPYzS/ecommerce.png",
+      image: "https://i.postimg.cc/25hTjQhy/Captura-de-pantalla-2025-02-22-164023.png",
       link: "https://example-taskapp.com",
       technologies: [
          
