@@ -159,8 +159,8 @@ export default function Home() {
   
 
   const cvLinks = {
-    es: "/cv-arturo-grottoli-es.pdf",
-    en: "/cv-arturo-grottoli-en.pdf",
+    es: "https://drive.google.com/file/d/1ga0Xbs_w5VIdSnmIEWLlTpoU8htanfyf/view?usp=sharing",
+    en: "https://drive.google.com/file/d/1hTQ5SBo65fPY_tIqIgvEjaFtzu4YgyEt/view?usp=sharing",
   }
 
   return (
