@@ -56,9 +56,33 @@ export default function Home() {
 
   const portfolioItems = [
     {
-      title: "Ecommerce React",
-     description: "A productivity app developed using Vue.js and Firebase",
+      title: "Dibujantis",
+     description: "A portfolio of illustrators and designers",
      image: "https://i.postimg.cc/25hTjQhy/Captura-de-pantalla-2025-02-22-164023.png",
+     link: "https://example-taskapp.com",
+     technologies: [
+        { icon: siReact, name: "React" },
+       { icon: siCss3, name: "CSS3" },
+       { icon: siBootstrap, name: "Bootstrap" }
+       
+     ],
+   },
+   {
+    title: "Movie recommendations",
+   description: "Movies recommendations using python an API and IA",
+   image: "https://i.postimg.cc/5yTTPYzS/ecommerce.png",
+   link: "https://example-taskapp.com",
+   technologies: [
+      { icon: siReact, name: "React" },
+     { icon: siCss3, name: "CSS3" },
+     { icon: siBootstrap, name: "Bootstrap" }
+     
+   ],
+ },
+    {
+      title: "Burger for Friends",
+     description: "E-commerce of hamburgers and drinks",
+     image: "https://i.postimg.cc/5yTTPYzS/ecommerce.png",
      link: "https://example-taskapp.com",
      technologies: [
         { icon: siReact, name: "React" },
