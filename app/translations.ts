@@ -21,10 +21,10 @@ export const translations = {
     career: "Trayectoria:",
     socialLinks: "RRSS:",
     emonkJob: "Emonk (2022-actual) - E-commerce admin, programador full stack.",
-    freelanceJob: "Freelance (2020-actual) - Desarrollo de sitios web personalizados para diversos clientes.",
+    freelanceJob: "Freelance (2021-actual) - Desarrollo de sitios web personalizados para diversos clientes.",
     liramaticJob:
-      "Liramatic (2021-actual) - Generación de reportes para flotas vehiculares mediante tableros Power BI.",
-    codoacodoJob: "Profesor curso Full Stack Python Codo a codo (2021-2023)",
+      "Liramatic (2018-2022) - Generación de reportes para flotas vehiculares mediante tableros Power BI.",
+    codoacodoJob: "Profesor curso Full Stack Python Codo a codo (2022-2024)",
     coderhouseJob: "Tutor en Coderhouse para cursos Desarrollo web, javascript, reactjs y SQL (2021-actualidad)",
     featuredProjects: "Proyectos destacados:",
   },
