@@ -82,7 +82,7 @@ export default function Home() {
     {
       title: "Burger for Friends",
      description: "E-commerce of hamburgers and drinks",
-     image: "https://i.postimg.cc/5yTTPYzS/ecommerce.png",
+     image: "https://i.postimg.cc/N0zKCX34/bff.png",
      link: "https://example-taskapp.com",
      technologies: [
         { icon: siReact, name: "React" },
@@ -94,7 +94,7 @@ export default function Home() {
    {
     title: "Cliff Hostel",
    description: "A surf hostel in Chapadmalal page, Next Js and Tailwind",
-   image: "https://i.postimg.cc/RFPfDbH1/Captura.png",
+   image: "https://i.postimg.cc/V6mq1nGc/cliff-hostel.png",
    link: "https://example-taskapp.com",
    technologies: [
      { icon: siTypescript, name: "Typescript" },
@@ -296,8 +296,8 @@ export default function Home() {
               <div className={styles.sectionContent}>
                 <p>{t.telecomDesc}</p>
                 <ul>
-                  <li>{">"}SOTO COMUNICACIONES (2018-2020)</li>
-                  <li>{">"}BOOT ARGENTINA (2014-2018)</li>
+                  <li>{">"}SOTO COMUNICACIONES SA (2018-2020)</li>
+                  <li>{">"}BOOT ARGENTINA SA (2014-2018)</li>
                 </ul>
               </div>
             )}
