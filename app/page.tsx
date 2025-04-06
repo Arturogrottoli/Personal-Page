@@ -56,10 +56,10 @@ export default function Home() {
 
   const portfolioItems = [
     {
-      title: "Ecommerce React",
-     description: "A productivity app developed using Vue.js and Firebase",
-     image: "https://i.postimg.cc/25hTjQhy/Captura-de-pantalla-2025-02-22-164023.png",
-     link: "https://example-taskapp.com",
+      title: "Dibujantis Portfolio",
+      description: "Portfolio of the illustrator Dibujantis",
+     image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
+     link: "https://v0-dibujantis-bodp3q.vercel.app",
      technologies: [
         { icon: siReact, name: "React" },
        { icon: siCss3, name: "CSS3" },
