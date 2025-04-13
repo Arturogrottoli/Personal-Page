@@ -133,7 +133,7 @@ export default function Home() {
     },
     {
       title: "CoderVision, a new streaming",
-      description: "A new streaming service to watch your favorite series and movies.",
+      description: "Streaming service to watch your favorite series and movies.",
       image: "https://i.postimg.cc/FsHfkvRC/codervision.png",
       link: "https://example-socialdashboard.com",
       technologies: [
