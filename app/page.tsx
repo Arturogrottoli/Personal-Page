@@ -55,6 +55,7 @@ export default function Home() {
   const t = translations[language]
 
   const portfolioItems = [
+
     {
       title: "New page 2",
       description: "Portfolio of the illustrator Dibujantis",
