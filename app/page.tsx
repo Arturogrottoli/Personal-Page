@@ -56,32 +56,9 @@ export default function Home() {
 
   const portfolioItems = [
 
-    {
-      title: "New page 2",
-      description: "Portfolio of the illustrator Dibujantis",
-     image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
-     link: "https://v0-dibujantis-bodp3q.vercel.app",
-     technologies: [
-        { icon: siReact, name: "React" },
-       { icon: siCss3, name: "CSS3" },
-       { icon: siBootstrap, name: "Bootstrap" }
-       
-     ],
-   },
-    {
-      title: "New page",
-      description: "Portfolio of the illustrator Dibujantis",
-     image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
-     link: "https://v0-dibujantis-bodp3q.vercel.app",
-     technologies: [
-        { icon: siReact, name: "React" },
-       { icon: siCss3, name: "CSS3" },
-       { icon: siBootstrap, name: "Bootstrap" }
-       
-     ],
-   },
+
    {
-    title: "Dibujantis Portfolio",
+    title: "Transportes CoCo",
     description: "Portfolio of the illustrator Dibujantis",
    image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
    link: "https://v0-dibujantis-bodp3q.vercel.app",
@@ -96,7 +73,7 @@ export default function Home() {
       title: "Dibujantis Portfolio",
       description: "Portfolio of the illustrator Dibujantis",
      image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
-     link: "https://v0-dibujantis-bodp3q.vercel.app",
+     link: "https://www.dibujantis.com",
      technologies: [
         { icon: siReact, name: "React" },
        { icon: siCss3, name: "CSS3" },
