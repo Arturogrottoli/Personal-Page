@@ -57,10 +57,10 @@ export default function Home() {
   const portfolioItems = [
 
     {
-      title: "Transportes CoCo",
+      title: "Setlistfm to Spoty",
       description: "Portfolio of the illustrator Dibujantis",
      image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
-     link: "https://v0-dibujantis-bodp3q.vercel.app",
+     link: "https://setlistspotify.vercel.app/",
      technologies: [
         { icon: siReact, name: "React" },
        { icon: siCss3, name: "CSS3" },
