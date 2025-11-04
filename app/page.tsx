@@ -59,7 +59,7 @@ export default function Home() {
    {
   title: "Setlistfm to Spotify",
   description: "Converts setlists from Setlist.fm into Spotify playlists — search concerts, pick songs, and export a ready-to-play playlist.",
-  image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
+  image: "https://ibb.co/qL6ZVwGL",
   link: "https://setlistspotify.vercel.app/",
   technologies: [
     { icon: siReact, name: "React" },
