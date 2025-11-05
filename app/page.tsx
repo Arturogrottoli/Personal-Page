@@ -55,6 +55,18 @@ export default function Home() {
   const t = translations[language]
 
   const portfolioItems = [
+    {
+      title: "Setlistfm to Spotify",
+      description: "Converts setlists from Setlist.fm into Spotify playlists — search concerts, pick songs, and export a ready-to-play playlist.",
+      image: "https://ibb.co/qL6ZVwGL",
+      link: "https://setlistspotify.vercel.app/",
+      technologies: [
+        { icon: siReact, name: "React" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siBootstrap, name: "Bootstrap" }
+      ],
+    },
+
 
    {
   title: "Setlistfm to Spotify",
