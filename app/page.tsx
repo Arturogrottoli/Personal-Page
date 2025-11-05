@@ -56,7 +56,7 @@ export default function Home() {
 
   const portfolioItems = [
     {
-      title: "Setlistfm to Spotify",
+      title: "Corazon Verde, pollos de campo",
       description: "Converts setlists from Setlist.fm into Spotify playlists — search concerts, pick songs, and export a ready-to-play playlist.",
       image: "https://ibb.co/qL6ZVwGL",
       link: "https://setlistspotify.vercel.app/",
