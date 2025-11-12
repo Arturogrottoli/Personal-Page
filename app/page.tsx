@@ -58,20 +58,20 @@ export default function Home() {
     {
       title: "Corazon Verde, pollos de campo",
       description: "Converts setlists from Setlist.fm into Spotify playlists — search concerts, pick songs, and export a ready-to-play playlist.",
-      image: "https://ibb.co/qL6ZVwGL",
+      image: "https://i.postimg.cc/jdZbmXRh/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg",
       link: "https://setlistspotify.vercel.app/",
       technologies: [
-        { icon: siReact, name: "React" },
+        { icon: siNextdotjs, name: "Next.js" },
         { icon: siCss3, name: "CSS3" },
-        { icon: siBootstrap, name: "Bootstrap" }
+        { icon: siTailwindcss, name: "Tailwind" }
       ],
     },
 
 
    {
   title: "Setlistfm to Spotify",
-  description: "Converts setlists from Setlist.fm into Spotify playlists — search concerts, pick songs, and export a ready-to-play playlist.",
-  image: "https://ibb.co/qL6ZVwGL",
+  description: "Converts setlists from Setlist.fm into Spotify playlist",
+  image: "https://i.postimg.cc/8kxK5fwK/Captura-de-pantalla-2025-11-12-194048.png",
   link: "https://setlistspotify.vercel.app/",
   technologies: [
     { icon: siReact, name: "React" },
@@ -82,7 +82,7 @@ export default function Home() {
    {
     title: "Transportes CoCo",
     description: "Transportation company for people and pets.",
-    image: "https://i.ibb.co/1Y2Q1kWy",
+    image: "https://i.postimg.cc/kgbTKJYD/Captura-de-pantalla-2025-11-12-194048.png",
     link: "https://transportecoco.vercel.app/",
    technologies: [
       { icon: siReact, name: "React" },

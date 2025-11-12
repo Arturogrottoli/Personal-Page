@@ -25,7 +25,7 @@ export const translations = {
     liramaticJob:
       "Liramatic (2021-actual) - Generación de reportes para flotas vehiculares mediante tableros Power BI.",
     codoacodoJob: "Profesor curso Full Stack Python Codo a codo (2021-2024)",
-    coderhouseJob: "Tutor en Coderhouse para cursos Desarrollo web, Javascript, Reactjs y SQL (2021-actualidad)",
+    coderhouseJob: "Tutor en Coderhouse para cursos Desarrollo web, Javascript, Reactjs, Data Science y SQL (2021-actualidad)",
     featuredProjects: "Proyectos destacados:",
   },
   en: {
