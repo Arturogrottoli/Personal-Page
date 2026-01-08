@@ -298,10 +298,11 @@
 }
 
 .portfolioItem img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 200px;
   margin-bottom: 0.5rem;
   object-fit: cover;
+  border: 1px solid #33ff33;
 }
 
 .portfolioItem h4 {

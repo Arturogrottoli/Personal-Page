@@ -57,7 +57,7 @@ export default function Home() {
   const portfolioItems = [
     {
       title: "Corazon Verde, pollos de campo",
-      description: "Converts setlists from Setlist.fm into Spotify playlists — search concerts, pick songs, and export a ready-to-play playlist.",
+      description: "Pollos de granja criados naturalmente",
       image: "https://i.postimg.cc/jdZbmXRh/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg",
       link: "https://setlistspotify.vercel.app/",
       technologies: [
@@ -70,7 +70,7 @@ export default function Home() {
 
    {
   title: "Setlistfm to Spotify",
-  description: "Converts setlists from Setlist.fm into Spotify playlist",
+  description: "Converts setlists from Setlist.fm into Spotify playlists — search concerts, pick songs, and export a ready-to-play playlist",
   image: "https://i.postimg.cc/8kxK5fwK/Captura-de-pantalla-2025-11-12-194048.png",
   link: "https://setlistspotify.vercel.app/",
   technologies: [
