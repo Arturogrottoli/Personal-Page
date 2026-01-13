@@ -170,8 +170,8 @@ export default function Home() {
     {
       title: "CoderVision, a new streaming",
       description: "Streaming service to watch your favorite series and movies.",
-      image: "https://i.postimg.cc/FsHfkvRC/codervision.png",
-      link: "https://example-socialdashboard.com",
+      image: "https://i.ibb.co/j92gdsF9/Coder-Vision.png",
+      link: "https://codervision.netlify.app",
       technologies: [
         { icon: siHtml5, name: "HTML5" },
         { icon: siCss3, name: "CSS3" },
