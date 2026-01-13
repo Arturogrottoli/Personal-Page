@@ -1,6 +1,6 @@
 export const translations = {
   es: {
-    title: "Hola, soy Arturo, profesional IT con experiencia en programación y telecomunicaciones",
+    title: "Hola! Soy Arturo, profesional de IT con experiencia en programación, análisis de datos, telecomunicaciones y docencia.",
     fullstack: "Programador Full Stack",
     fullstackDesc:
       "Desarrollador web especializado en la creación de aplicaciones web completas, implementando soluciones eficientes y escalables.",
@@ -29,7 +29,7 @@ export const translations = {
     featuredProjects: "Proyectos destacados:",
   },
   en: {
-    title: "Hi, I'm Arturo, an IT professional with experience in programming and telecommunications",
+    title: "Hi! I'm Arturo, an IT professional with experience in programming, data analysis, telecommunications, and teaching.",
     fullstack: "Full Stack Developer",
     fullstackDesc:
       "Web developer specialized in creating complete web applications, implementing efficient and scalable solutions.",
