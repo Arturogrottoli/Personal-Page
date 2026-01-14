@@ -182,13 +182,13 @@ export default function Home() {
     {
       title: "Mija, baby carrier backpack",
       description: "A real project for the Mija business through Coderhouse.",
-      image: "https://i.postimg.cc/C1JhwZjh/mija.png",
+      image: "https://i.ibb.co/mr6jgYvk/Captura-de-pantalla-2026-01-14-185732.png",
       link: "https://arturogrottoli.github.io/Mija/",
       technologies: [
         { icon: siHtml5, name: "HTML5" },
         { icon: siCss3, name: "CSS3" },
         { icon: siJavascript, name: "JavaScript" },
-        { icon: siBootstrap, name: "Bootstrap" }
+        { icon: siTailwindcss, name: "Tailwind" }
       ],
     },
   ]
