@@ -157,8 +157,8 @@ export default function Home() {
     {
       title: "Casacas Futbol! Soccer tshirts ecommerce",
       description: "Ecommerce of national team and club football jerseys",
-      image: "https://i.postimg.cc/mDnQMbY9/casacas.png",
-      link: "https://example-weather.com",
+      image: "https://i.ibb.co/rRg9q122/casacasfutbol.png",
+      link: "https://curved-powder.surge.sh",
       technologies: [
       
         { icon: siReact, name: "React" },
