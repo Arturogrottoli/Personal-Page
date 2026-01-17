@@ -145,7 +145,7 @@ export default function Home() {
     {
       title: "Reftel,Technological solutions",
       description: "Intercom systems and VAR service applied to football.",
-      image: "https://i.postimg.cc/D02KrT72/reftel.png",
+      image: "https://i.ibb.co/LdRNGL5J/reftel.png",
       link: "https://reftelcomunicaciones.netlify.app/",
       technologies: [
         { icon: siHtml5, name: "HTML5" },
