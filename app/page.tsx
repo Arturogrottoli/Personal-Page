@@ -70,7 +70,7 @@ export default function Home() {
 
    {
   title: "Setlistfm to Spotify",
-  description: "Converts setlists from Setlist.fm into Spotify playlists — search concerts, pick songs, and export a ready-to-play playlist",
+  description: "Converts shows from Setlist.fm into Spotify playlists",
   image: "https://i.postimg.cc/8kxK5fwK/Captura-de-pantalla-2025-11-12-194048.png",
   link: "https://setlistspotify.vercel.app/",
   technologies: [
@@ -119,7 +119,7 @@ export default function Home() {
        title: "Tu CryptoBro",
       description: "An app to check cryptocurrency prices via an API",
       image: "https://i.postimg.cc/25hTjQhy/Captura-de-pantalla-2025-02-22-164023.png",
-      link: "https://example-taskapp.com",
+      link: "https://tu-crypto-bro.vercel.app/",
       technologies: [
          
      
