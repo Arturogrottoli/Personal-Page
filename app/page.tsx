@@ -133,7 +133,7 @@ export default function Home() {
       title: "Ecommerce React",
       description: "E-commerce of products fetched from a generic API.",
       image: "https://i.postimg.cc/5yTTPYzS/ecommerce.png",
-      link: "possible-hook.surge.sh/",
+      link: "https://possible-hook.surge.sh/",
       technologies: [
          { icon: siReact, name: "React" },
         { icon: siCss3, name: "CSS3" },
@@ -143,7 +143,7 @@ export default function Home() {
     },
     
     {
-      title: "Reftel,Technological solutions",
+      title: "Reftel  solutions",
       description: "Intercom systems and VAR service applied to football.",
       image: "https://i.ibb.co/LdRNGL5J/reftel.png",
       link: "https://reftelcomunicaciones.netlify.app/",
