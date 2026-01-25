@@ -132,7 +132,7 @@ export default function Home() {
     {
       title: "Ecommerce React",
       description: "E-commerce of products fetched from a generic API.",
-      image: "https://i.postimg.cc/5yTTPYzS/ecommerce.png",
+      image: "https://i.ibb.co/k2q9KR2G/tiendaonline.png",
       link: "https://possible-hook.surge.sh/",
       technologies: [
          { icon: siReact, name: "React" },
