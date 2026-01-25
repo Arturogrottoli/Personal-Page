@@ -1,6 +1,6 @@
 export const translations = {
   es: {
-    title: "Hola! Soy Arturo, profesional de IT con experiencia en programación, análisis de datos, telecomunicaciones y docencia.",
+    title: "Hola! Soy Arturo, profesional IT con experiencia en programación, análisis de datos, telecomunicaciones y docencia.",
     fullstack: "Programador Full Stack",
     fullstackDesc:
       "Desarrollador web especializado en la creación de aplicaciones web completas, implementando soluciones eficientes y escalables.",
@@ -25,7 +25,7 @@ export const translations = {
     liramaticJob:
       "Liramatic (2021-actual) - Generación de reportes para flotas vehiculares mediante tableros Power BI.",
     codoacodoJob: "Profesor curso Full Stack Python Codo a codo (2021-2024)",
-    coderhouseJob: "Tutor en Coderhouse para cursos Desarrollo web, Javascript, Reactjs,AI automation, Data Science y SQL (2021-actualidad)",
+    coderhouseJob: "Tutor en Coderhouse para cursos Desarrollo web, Javascript, Reactjs, AI automation, Data Science y SQL (2021-actualidad)",
     featuredProjects: "Proyectos destacados:",
   },
   en: {
