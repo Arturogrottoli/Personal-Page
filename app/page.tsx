@@ -82,7 +82,7 @@ export default function Home() {
    {
     title: "Transportes CoCo",
     description: "Transportation company for people and pets.",
-    image: "https://i.postimg.cc/kgbTKJYD/Captura-de-pantalla-2025-11-12-194048.png",
+    image: "https://i.ibb.co/dsVbsWyN/cocotransporte.png",
     link: "https://transportecoco.vercel.app/",
    technologies: [
       { icon: siReact, name: "React" },
