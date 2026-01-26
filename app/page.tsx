@@ -56,7 +56,7 @@ export default function Home() {
 
   const portfolioItems = [
     {
-      title: "Corazon Verde, pollos de campo",
+      title: "Corazon Verde",
       description: "Pollos de granja criados naturalmente",
       image: "https://i.postimg.cc/jdZbmXRh/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg",
       link: "https://setlistspotify.vercel.app/",
@@ -71,7 +71,7 @@ export default function Home() {
    {
   title: "Setlistfm to Spotify",
   description: "Converts shows from Setlist.fm into Spotify playlists",
-  image: "https://i.postimg.cc/8kxK5fwK/Captura-de-pantalla-2025-11-12-194048.png",
+  image: "https://i.ibb.co/tpztnSs8/setlisttospoty.png",
   link: "https://setlistspotify.vercel.app/",
   technologies: [
     { icon: siReact, name: "React" },
