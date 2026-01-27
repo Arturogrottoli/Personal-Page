@@ -57,7 +57,7 @@ export default function Home() {
   const portfolioItems = [
     {
       title: "Corazon Verde",
-      description: "Pollos de granja criados naturalmente",
+      description: "Farm-raised chickens raised naturally",
       image: "https://i.postimg.cc/jdZbmXRh/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg",
       link: "https://setlistspotify.vercel.app/",
       technologies: [
@@ -107,7 +107,7 @@ export default function Home() {
     title: "Cliff Hostel",
    description: "A surf hostel in Chapadmalal page, Next Js and Tailwind",
    image: "https://i.postimg.cc/RFPfDbH1/Captura.png",
-   link: "https://example-taskapp.com",
+   link: "https://cliff-hostel.vercel.app/",
    technologies: [
      { icon: siTypescript, name: "Typescript" },
         { icon: siTailwindcss, name: "Tailwind" },
