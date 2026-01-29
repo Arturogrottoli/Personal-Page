@@ -76,7 +76,7 @@ export default function Home() {
   technologies: [
     { icon: siReact, name: "React" },
     { icon: siCss3, name: "CSS3" },
-    { icon: siBootstrap, name: "Bootstrap" }
+    { icon: siTailwindcss, name: "Tailwind" }
   ],
 },
    {
@@ -111,7 +111,7 @@ export default function Home() {
    technologies: [
      { icon: siTypescript, name: "Typescript" },
         { icon: siTailwindcss, name: "Tailwind" },
-        { icon: siReact, name: "React" },
+        { icon: siReact, name: "Next.js" },
      
    ],
  },
