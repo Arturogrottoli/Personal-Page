@@ -55,6 +55,19 @@ export default function Home() {
   const t = translations[language]
 
   const portfolioItems = [
+
+     {
+      title: "Movie Points Tracker",
+      description: "Watchlist movies to play",
+      image: "https://i.ibb.co/0ycnvSwj/moviepoint.png",
+      link: "https://setlistspotify.vercel.app/",
+      technologies: [
+        { icon: siNextdotjs, name: "Next.js" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siTailwindcss, name: "Tailwind" },
+        { icon: siPython, name: "Python" }
+      ],
+    },
     {
       title: "Corazon Verde",
       description: "Farm-raised chickens raised naturally",
