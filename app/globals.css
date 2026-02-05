@@ -272,7 +272,7 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 0.5rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .portfolioItem h4 {

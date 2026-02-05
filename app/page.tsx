@@ -58,7 +58,7 @@ export default function Home() {
 
      {
       title: "Movie Points Tracker",
-      description: "Watchlist movies to play",
+      description: "Watchlist app with points, user login, and database support.",
       image: "https://i.ibb.co/0ycnvSwj/moviepoint.png",
       link: "https://setlistspotify.vercel.app/",
       technologies: [
