@@ -56,11 +56,12 @@ export default function Home() {
 
   const portfolioItems = [
 
-     {
+    {
       title: "Movie Points Tracker",
       description: "Watchlist app with points, user login, and database support.",
       image: "https://i.ibb.co/0ycnvSwj/moviepoint.png",
       link: "https://setlistspotify.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/python-movies",
       technologies: [
         { icon: siNextdotjs, name: "Next.js" },
         { icon: siCss3, name: "CSS3" },
@@ -73,73 +74,71 @@ export default function Home() {
       description: "Farm-raised chickens raised naturally",
       image: "https://i.postimg.cc/jdZbmXRh/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg",
       link: "https://setlistspotify.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/corazonverde",
       technologies: [
         { icon: siNextdotjs, name: "Next.js" },
         { icon: siCss3, name: "CSS3" },
         { icon: siTailwindcss, name: "Tailwind" }
       ],
     },
-
-
-   {
-  title: "Setlistfm to Spotify",
-  description: "Converts shows from Setlist.fm into Spotify playlists",
-  image: "https://i.ibb.co/tpztnSs8/setlisttospoty.png",
-  link: "https://setlistspotify.vercel.app/",
-  technologies: [
-    { icon: siReact, name: "React" },
-    { icon: siCss3, name: "CSS3" },
-    { icon: siTailwindcss, name: "Tailwind" }
-  ],
-},
-   {
-    title: "Transportes CoCo",
-    description: "Transportation company for people and pets.",
-    image: "https://i.ibb.co/dsVbsWyN/cocotransporte.png",
-    link: "https://transportecoco.vercel.app/",
-   technologies: [
-      { icon: siReact, name: "React" },
-     { icon: siCss3, name: "CSS3" },
-     { icon: siBootstrap, name: "Bootstrap" }
-     
-   ],
- },
+    {
+      title: "Setlistfm to Spotify",
+      description: "Converts shows from Setlist.fm into Spotify playlists",
+      image: "https://i.ibb.co/tpztnSs8/setlisttospoty.png",
+      link: "https://setlistspotify.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/setlistfm-to-spotify",
+      technologies: [
+        { icon: siReact, name: "React" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siTailwindcss, name: "Tailwind" }
+      ],
+    },
+    {
+      title: "Transportes CoCo",
+      description: "Transportation company for people and pets.",
+      image: "https://i.ibb.co/dsVbsWyN/cocotransporte.png",
+      link: "https://transportecoco.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/transportescoco",
+      technologies: [
+        { icon: siReact, name: "React" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siBootstrap, name: "Bootstrap" }
+      ],
+    },
     {
       title: "Dibujantis Portfolio",
       description: "Portfolio of the illustrator Dibujantis",
-     image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
-     link: "https://www.dibujantis.com",
-     technologies: [
+      image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
+      link: "https://www.dibujantis.com",
+      repo: "https://github.com/Arturogrottoli/Dibujantis",
+      technologies: [
         { icon: siReact, name: "React" },
-       { icon: siCss3, name: "CSS3" },
-       { icon: siBootstrap, name: "Bootstrap" }
-       
-     ],
-   },
-   {
-    title: "Cliff Hostel",
-   description: "A surf hostel in Chapadmalal page, Next Js and Tailwind",
-   image: "https://i.postimg.cc/RFPfDbH1/Captura.png",
-   link: "https://cliff-hostel.vercel.app/",
-   technologies: [
-     { icon: siTypescript, name: "Typescript" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siBootstrap, name: "Bootstrap" }
+      ],
+    },
+    {
+      title: "Cliff Hostel",
+      description: "A surf hostel in Chapadmalal page, Next Js and Tailwind",
+      image: "https://i.postimg.cc/RFPfDbH1/Captura.png",
+      link: "https://cliff-hostel.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/Cliff-Hostel",
+      technologies: [
+        { icon: siTypescript, name: "Typescript" },
         { icon: siTailwindcss, name: "Tailwind" },
         { icon: siReact, name: "Next.js" },
-     
-   ],
- },
+      ],
+    },
     {
-       title: "Tu CryptoBro",
+      title: "Tu CryptoBro",
       description: "An app to check cryptocurrency prices via an API",
       image: "https://i.postimg.cc/25hTjQhy/Captura-de-pantalla-2025-02-22-164023.png",
       link: "https://tu-crypto-bro.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/TuCryptoBro",
       technologies: [
-         
-     
         { icon: siTypescript, name: "Typescript" },
         { icon: siTailwindcss, name: "Tailwind" },
         { icon: siReact, name: "React" },
-        
       ],
     },
     {
@@ -147,19 +146,19 @@ export default function Home() {
       description: "E-commerce of products fetched from a generic API.",
       image: "https://i.ibb.co/k2q9KR2G/tiendaonline.png",
       link: "https://possible-hook.surge.sh/",
+      repo: "https://github.com/Arturogrottoli/E-commerce-React",
       technologies: [
-         { icon: siReact, name: "React" },
+        { icon: siReact, name: "React" },
         { icon: siCss3, name: "CSS3" },
         { icon: siBootstrap, name: "Bootstrap" }
-        
       ],
     },
-    
     {
       title: "Reftel Technology Solutions",
       description: "Intercom systems and VAR service applied to football.",
       image: "https://i.ibb.co/LdRNGL5J/reftel.png",
       link: "https://reftelcomunicaciones.netlify.app/",
+      repo: "https://github.com/Arturogrottoli/Reftel-Comunicaciones",
       technologies: [
         { icon: siHtml5, name: "HTML5" },
         { icon: siCss3, name: "CSS3" },
@@ -172,8 +171,8 @@ export default function Home() {
       description: "Ecommerce of national team and club football jerseys",
       image: "https://i.ibb.co/rRg9q122/casacasfutbol.png",
       link: "https://curved-powder.surge.sh",
+      repo: "https://github.com/Arturogrottoli/Reactivo",
       technologies: [
-      
         { icon: siReact, name: "React" },
         { icon: siCss3, name: "CSS3" },
         { icon: siBootstrap, name: "Bootstrap" },
@@ -185,6 +184,7 @@ export default function Home() {
       description: "Streaming service to watch your favorite series and movies.",
       image: "https://i.ibb.co/j92gdsF9/Coder-Vision.png",
       link: "https://codervision.netlify.app",
+      repo: "https://github.com/Arturogrottoli/CoderVision",
       technologies: [
         { icon: siHtml5, name: "HTML5" },
         { icon: siCss3, name: "CSS3" },
@@ -197,6 +197,7 @@ export default function Home() {
       description: "A real project for the Mija business through Coderhouse.",
       image: "https://i.ibb.co/mr6jgYvk/Captura-de-pantalla-2026-01-14-185732.png",
       link: "https://arturogrottoli.github.io/Mija/",
+      repo: "https://github.com/Arturogrottoli/Mija",
       technologies: [
         { icon: siHtml5, name: "HTML5" },
         { icon: siCss3, name: "CSS3" },
@@ -360,7 +361,14 @@ export default function Home() {
     <img src={item.image} alt={item.title} />
     <h3>{item.title}</h3>
     <p>{item.description}</p>
-    <a href={item.link} target="_blank" rel="noopener noreferrer">Project</a>
+    <div className={styles.portfolioLinks}>
+      <a href={item.repo} target="_blank" rel="noopener noreferrer" className={styles.portfolioLink}>
+        <Github size={16} /> Repo
+      </a>
+      <a href={item.link} target="_blank" rel="noopener noreferrer" className={styles.portfolioLink}>
+        <Globe size={16} /> Web
+      </a>
+    </div>
     <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
       {item.technologies.map((tech, i) => (
         <TechIcon key={i} icon={tech.icon} name={tech.name} />
