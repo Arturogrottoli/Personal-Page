@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import styles from "./page.module.css"
-import { Download, Github, Linkedin, BarChart2, Smartphone, GraduationCap, Code, Briefcase, Globe } from "lucide-react"
+import { Download, Github, Linkedin, BarChart2, Smartphone, GraduationCap, Code, Briefcase, Globe, AppWindow } from "lucide-react"
 import { translations } from "./translations"
 import {
   siHtml5,
@@ -60,7 +60,7 @@ export default function Home() {
       title: "Movie Points Tracker",
       description: "Watchlist app with points, user login, and database support.",
       image: "https://i.ibb.co/0ycnvSwj/moviepoint.png",
-      link: "https://setlistspotify.vercel.app/",
+      link: "https://python-movies.vercel.app/",
       repo: "https://github.com/Arturogrottoli/python-movies",
       technologies: [
         { icon: siNextdotjs, name: "Next.js" },
@@ -366,7 +366,7 @@ export default function Home() {
         <Github size={16} /> Repo
       </a>
       <a href={item.link} target="_blank" rel="noopener noreferrer" className={styles.portfolioLink}>
-        <Globe size={16} /> Web
+        <AppWindow size={16} /> Web
       </a>
     </div>
     <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
