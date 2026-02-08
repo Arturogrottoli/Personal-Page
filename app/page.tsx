@@ -20,7 +20,8 @@ import {
   siBootstrap,
   siFirebase,
   siTypescript,
-  siTailwindcss
+  siTailwindcss,
+  siPwa
 } from "simple-icons"
 
 interface IconType {
@@ -64,7 +65,7 @@ export default function Home() {
       repo: "https://github.com/Arturogrottoli/python-movies",
       technologies: [
         { icon: siNextdotjs, name: "Next.js" },
-        { icon: siCss3, name: "CSS3" },
+        { icon: siPwa, name: "PWA" },
         { icon: siTailwindcss, name: "Tailwind" },
         { icon: siPython, name: "Python" }
       ],
@@ -89,7 +90,7 @@ export default function Home() {
       repo: "https://github.com/Arturogrottoli/setlistfm-to-spotify",
       technologies: [
         { icon: siReact, name: "React" },
-        { icon: siCss3, name: "CSS3" },
+        { icon: siPwa, name: "PWA" },
         { icon: siTailwindcss, name: "Tailwind" }
       ],
     },
