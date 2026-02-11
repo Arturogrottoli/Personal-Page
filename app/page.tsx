@@ -73,7 +73,7 @@ export default function Home() {
     {
       title: "Corazon Verde",
       description: "Farm-raised chickens raised naturally",
-      image: "https://i.postimg.cc/jdZbmXRh/Whats-App-Image-2025-11-05-at-3-51-30-PM.jpg",
+      image: "https://i.ibb.co/KxmqFsm6/corazon-verde.png",
       link: "https://setlistspotify.vercel.app/",
       repo: "https://github.com/Arturogrottoli/corazonverde",
       technologies: [
