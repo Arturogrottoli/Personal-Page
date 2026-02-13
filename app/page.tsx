@@ -74,7 +74,7 @@ export default function Home() {
       title: "Corazon Verde",
       description: "Farm-raised chickens raised naturally",
       image: "https://i.ibb.co/KxmqFsm6/corazon-verde.png",
-      link: "https://setlistspotify.vercel.app/",
+      link: "https://corazonverde.vercel.app/",
       repo: "https://github.com/Arturogrottoli/corazonverde",
       technologies: [
         { icon: siNextdotjs, name: "Next.js" },
@@ -86,7 +86,7 @@ export default function Home() {
       title: "Setlistfm to Spotify",
       description: "Converts shows from Setlist.fm into Spotify playlists",
       image: "https://i.ibb.co/tpztnSs8/setlisttospoty.png",
-      link: "https://setlistspotify.vercel.app/",
+      link: "https://setlistfm-to-spotify.vercel.app/",
       repo: "https://github.com/Arturogrottoli/setlistfm-to-spotify",
       technologies: [
         { icon: siReact, name: "React" },
