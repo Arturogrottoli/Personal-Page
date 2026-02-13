@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import styles from "./page.module.css"
 import { Download, Github, Linkedin, BarChart2, Smartphone, GraduationCap, Code, Briefcase, Globe, AppWindow } from "lucide-react"
 import { translations } from "./translations"
@@ -359,7 +360,7 @@ export default function Home() {
                 <div className={styles.portfolioGrid}>
                 {portfolioItems.map((item, index) => (
   <div key={index} className={styles.portfolioItem}>
-    <img src={item.image} alt={item.title} />
+    <Image src={item.image} alt={item.title} width={400} height={200} />
     <h3>{item.title}</h3>
     <p>{item.description}</p>
     <div className={styles.portfolioLinks}>
