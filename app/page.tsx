@@ -140,7 +140,7 @@ export default function Home() {
       technologies: [
         { icon: siTypescript, name: "Typescript" },
         { icon: siTailwindcss, name: "Tailwind" },
-        { icon: siReact, name: "React" },
+          { icon: siPwa, name: "PWA" },
       ],
     },
     {
