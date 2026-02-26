@@ -1,6 +1,7 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
-import type React from "react" 
+import type React from "react"
+import ChatBot from "@/components/ChatBot"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -17,8 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-       
-      <body className={inter.className}>{children}</body>
+
+      <body className={inter.className}>
+        {children}
+        <ChatBot />
+      </body>
     </html>
   )
 }
