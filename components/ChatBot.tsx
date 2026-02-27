@@ -47,8 +47,8 @@ export default function ChatBot() {
             })
 
             const data = await response.json()
-            if (data.text) {
-                setMessages((prev) => [...prev, { role: "bot", content: data.text }])
+            if (data.message) {
+                setMessages((prev) => [...prev, { role: "bot", content: data.message }])
             } else {
                 setMessages((prev) => [...prev, { role: "bot", content: "Lo siento, tuve un problema al procesar tu mensaje. Por favor intenta de nuevo." }])
             }
