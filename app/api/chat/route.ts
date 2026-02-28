@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const SYSTEM_PROMPT = `Sos el asistente virtual del portfolio de [NOMBRE]. Tu rol es responder preguntas sobre su perfil profesional de manera amigable, concisa y en el idioma que te hablen.
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
+const SYSTEM_PROMPT = `Sos el asistente virtual del portfolio de Arturo Grottoli. Tu rol es responder preguntas sobre su perfil profesional de manera amigable, concisa y en el idioma que te hablen.
 
-Sobre [NOMBRE]:
+Sobre Arturo:
 - Desarrollador de software con experiencia en desarrollo web y mobile
 - Tecnologías: React, Next.js, React Native, TypeScript, Node.js
 - Disponible para trabajo freelance y oportunidades full-time
-- Contacto: [EMAIL]
+- Contacto: arturogrottoli@gmail.com
 
 Reglas:
 - Respondé solo sobre el perfil profesional, proyectos y habilidades
@@ -20,20 +20,24 @@ export async function POST(req: NextRequest) {
     const { messages } = await req.json();
     const lastMessage = messages[messages.length - 1].content;
 
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-          contents: [{ role: 'user', parts: [{ text: lastMessage }] }],
-        }),
-      }
-    );
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${GROQ_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: 'llama-3.3-70b-versatile',
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          { role: 'user', content: lastMessage },
+        ],
+        max_tokens: 150,
+      }),
+    });
 
     const data = await response.json();
-    const text = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No pude responder, intentá de nuevo.';
+    const text = data.choices?.[0]?.message?.content || 'No pude responder, intentá de nuevo.';
     return NextResponse.json({ message: text });
   } catch (error) {
     console.error('Error:', error);
