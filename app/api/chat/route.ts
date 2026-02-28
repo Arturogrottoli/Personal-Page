@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const GEMINI_API_KEY = 'AIzaSyAZOTEUvbCitpINqLLu-yhFJZkBjdVfbl0';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const SYSTEM_PROMPT = `Sos el asistente virtual del portfolio de [NOMBRE]. Tu rol es responder preguntas sobre su perfil profesional de manera amigable, concisa y en el idioma que te hablen.
 
 Sobre [NOMBRE]:
