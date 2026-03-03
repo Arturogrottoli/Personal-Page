@@ -59,6 +59,18 @@ export default function Home() {
   const portfolioItems = [
 
     {
+      title: "Plant App",
+      description: "Mobile app to identify plants using AI.",
+      image: "https://i.ibb.co/ynCMfrYk/Whats-App-Image-2026-03-03-at-6-56-47-PM.jpg",
+      link: "https://expo.dev/accounts/turidevs-organization/projects/plant-app/builds/492f5b38-c002-487c-84f1-e76f8676b202",
+      repo: "https://github.com/Arturogrottoli/plant-app",
+      technologies: [
+        { icon: siReact, name: "React Native" },
+        { icon: siTypescript, name: "TypeScript" },
+        { icon: siJavascript, name: "Node.js" },
+      ],
+    },
+    {
       title: "Movie Points Tracker",
       description: "Watchlist app with points, user login, and database support.",
       image: "https://i.ibb.co/0ycnvSwj/moviepoint.png",
