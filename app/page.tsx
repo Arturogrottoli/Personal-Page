@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import styles from "./page.module.css"
 import { Download, Github, Linkedin, BarChart2, Smartphone, GraduationCap, Code, Briefcase, Globe, AppWindow } from "lucide-react"
@@ -265,8 +266,16 @@ export default function Home() {
                 - {t.fullstack} <Code size={18} />
               </span>
             </button>
+            <AnimatePresence>
             {openSection === "fullstack" && (
-              <div className={styles.sectionContent}>
+              <motion.div
+                className={styles.sectionContent}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{ overflow: "hidden" }}
+              >
                 <p>{t.fullstackDesc}</p>
                 <ul>
                   <li>
@@ -297,18 +306,27 @@ export default function Home() {
                   <TechIcon icon={siTailwindcss} name="Tailwind" />
                   
                 </div>
-              </div>
+              </motion.div>
             )}
+            </AnimatePresence>
           </li>
-          
+
           <li>
             <button onClick={() => toggleSection("teacher")} className={styles.sectionToggle}>
               <span>
                 - {t.teacher} <GraduationCap size={18} />
               </span>
             </button>
+            <AnimatePresence>
             {openSection === "teacher" && (
-              <div className={styles.sectionContent}>
+              <motion.div
+                className={styles.sectionContent}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{ overflow: "hidden" }}
+              >
                 <p>{t.teacherDesc}</p>
                 <ul>
                   <li>
@@ -320,10 +338,11 @@ export default function Home() {
                     {t.coderhouseJob}
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             )}
+            </AnimatePresence>
           </li>
-          
+
           <li>
             <button onClick={() => toggleSection("telecom")} className={styles.sectionToggle}>
               <span>
@@ -332,15 +351,24 @@ export default function Home() {
                 <Smartphone size={18} />
               </span>
             </button>
+            <AnimatePresence>
             {openSection === "telecom" && (
-              <div className={styles.sectionContent}>
+              <motion.div
+                className={styles.sectionContent}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{ overflow: "hidden" }}
+              >
                 <p>{t.telecomDesc}</p>
                 <ul>
                   <li>{">"}SOTO COMUNICACIONES (2018-2020)</li>
                   <li>{">"}BOOT ARGENTINA (2014-2018)</li>
                 </ul>
-              </div>
+              </motion.div>
             )}
+            </AnimatePresence>
           </li>
           <li>
             <button onClick={() => toggleSection("dataAnalyst")} className={styles.sectionToggle}>
@@ -348,8 +376,16 @@ export default function Home() {
                 - {t.dataAnalyst} <BarChart2 size={18} />
               </span>
             </button>
+            <AnimatePresence>
             {openSection === "dataAnalyst" && (
-              <div className={styles.sectionContent}>
+              <motion.div
+                className={styles.sectionContent}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{ overflow: "hidden" }}
+              >
                 <p>{t.dataAnalystDesc}</p>
                 <ul>
                   <li>
@@ -357,8 +393,9 @@ export default function Home() {
                     {t.liramaticJob}
                   </li>
                 </ul>
-              </div>
+              </motion.div>
             )}
+            </AnimatePresence>
           </li>
           <li>
             <button onClick={() => toggleSection("portfolio")} className={styles.sectionToggle}>
@@ -366,8 +403,16 @@ export default function Home() {
                 - {t.portfolio} <Briefcase size={18} />
               </span>
             </button>
+            <AnimatePresence>
             {openSection === "portfolio" && (
-              <div className={styles.sectionContent}>
+              <motion.div
+                className={styles.sectionContent}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                style={{ overflow: "hidden" }}
+              >
                 <p>{t.featuredProjects}</p>
                 <div className={styles.portfolioGrid}>
                 {portfolioItems.map((item, index) => (
@@ -392,8 +437,9 @@ export default function Home() {
 ))}
 
                 </div>
-              </div>
+              </motion.div>
             )}
+            </AnimatePresence>
           </li>
         </ul>
 
