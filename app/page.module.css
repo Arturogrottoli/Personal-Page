@@ -324,6 +324,7 @@
   background: radial-gradient(circle, rgba(51, 255, 51, 0.1) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.3s;
+  pointer-events: none;
 }
 
 .portfolioItem:hover {
@@ -346,11 +347,6 @@
   padding: 0.5rem;
   border: 1px solid #33ff33;
   transition: all 0.5s ease;
-}
-
-.portfolioItem:hover img {
-  transform: scale(1.05);
-  border-color: #ffffff;
 }
 
 .portfolioItem h4 {

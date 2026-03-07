@@ -124,7 +124,7 @@ export default function Home() {
       title: "Dibujantis Portfolio",
       description: "Portfolio of the illustrator Dibujantis",
       image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
-      link: "https://www.dibujantis.com",
+      link: "https://dibujantis.vercel.app/",
       repo: "https://github.com/Arturogrottoli/Dibujantis",
       technologies: [
         { icon: siReact, name: "React" },
@@ -153,7 +153,7 @@ export default function Home() {
       technologies: [
         { icon: siTypescript, name: "Typescript" },
         { icon: siTailwindcss, name: "Tailwind" },
-          { icon: siPwa, name: "PWA" },
+        { icon: siPwa, name: "PWA" },
       ],
     },
     {
@@ -221,7 +221,7 @@ export default function Home() {
       ],
     },
   ]
-  
+
 
   const cvLinks = {
     es: "https://drive.google.com/file/d/1ga0Xbs_w5VIdSnmIEWLlTpoU8htanfyf/view?usp=sharing",
@@ -267,59 +267,59 @@ export default function Home() {
               </span>
             </button>
             <AnimatePresence>
-            {openSection === "fullstack" && (
-              <motion.div
-                className={styles.sectionContent}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={{
-                  visible: { 
-                    height: "auto", 
-                    opacity: 1,
-                    transition: {
-                      height: { duration: 0.4, ease: "easeOut" },
-                      opacity: { duration: 0.3, delay: 0.1 },
-                      staggerChildren: 0.1,
-                      delayChildren: 0.2
+              {openSection === "fullstack" && (
+                <motion.div
+                  className={styles.sectionContent}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={{
+                    visible: {
+                      height: "auto",
+                      opacity: 1,
+                      transition: {
+                        height: { type: "spring", stiffness: 100, damping: 20 },
+                        opacity: { duration: 0.3 },
+                        staggerChildren: 0.08,
+                        delayChildren: 0.1
+                      }
+                    },
+                    hidden: {
+                      height: 0,
+                      opacity: 0,
+                      transition: {
+                        height: { duration: 0.3 },
+                        opacity: { duration: 0.2 },
+                        when: "afterChildren"
+                      }
                     }
-                  },
-                  hidden: { 
-                    height: 0, 
-                    opacity: 0,
-                    transition: {
-                      height: { duration: 0.3, ease: "easeIn" },
-                      opacity: { duration: 0.2 },
-                      when: "afterChildren"
-                    }
-                  }
-                }}
-                style={{ overflow: "hidden" }}
-              >
-                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.fullstackDesc}</motion.p>
-                <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
-                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
-                    {">"}
-                    {t.emonkJob}
-                  </motion.li>
-                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
-                    {">"}
-                    {t.freelanceJob}
-                  </motion.li>
-                </motion.ul>
-                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.technologies}</motion.p>
-                <motion.div 
-                  style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "10px" }}
-                  variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.05 } } }}
+                  }}
+                  style={{ overflow: "hidden" }}
                 >
-                  {[siHtml5, siCss3, siGithubIcon, siPhp, siPython, siJavascript, siReact, siMysql, siDjango, siFlask, siNextdotjs, siSass, siBootstrap, siTypescript, siTailwindcss].map((icon, i) => (
-                    <motion.div key={i} variants={{ hidden: { scale: 0, opacity: 0 }, visible: { scale: 1, opacity: 1 } }}>
-                      <TechIcon icon={icon} name={icon.title || ""} />
-                    </motion.div>
-                  ))}
+                  <motion.p variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>{t.fullstackDesc}</motion.p>
+                  <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+                    <motion.li variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>
+                      {">"}
+                      {t.emonkJob}
+                    </motion.li>
+                    <motion.li variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>
+                      {">"}
+                      {t.freelanceJob}
+                    </motion.li>
+                  </motion.ul>
+                  <motion.p variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>{t.technologies}</motion.p>
+                  <motion.div
+                    style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "10px" }}
+                    variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.04 } } }}
+                  >
+                    {[siHtml5, siCss3, siGithubIcon, siPhp, siPython, siJavascript, siReact, siMysql, siDjango, siFlask, siNextdotjs, siSass, siBootstrap, siTypescript, siTailwindcss].map((icon, i) => (
+                      <motion.div key={i} variants={{ hidden: { scale: 0, opacity: 0, rotate: -15 }, visible: { scale: 1, opacity: 1, rotate: 0, transition: { type: "spring", stiffness: 200 } } }}>
+                        <TechIcon icon={icon} name={icon.title || ""} />
+                      </motion.div>
+                    ))}
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            )}
+              )}
             </AnimatePresence>
           </li>
 
@@ -330,48 +330,48 @@ export default function Home() {
               </span>
             </button>
             <AnimatePresence>
-            {openSection === "teacher" && (
-              <motion.div
-                className={styles.sectionContent}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={{
-                  visible: { 
-                    height: "auto", 
-                    opacity: 1,
-                    transition: {
-                      height: { duration: 0.4, ease: "easeOut" },
-                      opacity: { duration: 0.3, delay: 0.1 },
-                      staggerChildren: 0.1,
-                      delayChildren: 0.2
+              {openSection === "teacher" && (
+                <motion.div
+                  className={styles.sectionContent}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={{
+                    visible: {
+                      height: "auto",
+                      opacity: 1,
+                      transition: {
+                        height: { type: "spring", stiffness: 100, damping: 20 },
+                        opacity: { duration: 0.3 },
+                        staggerChildren: 0.08,
+                        delayChildren: 0.1
+                      }
+                    },
+                    hidden: {
+                      height: 0,
+                      opacity: 0,
+                      transition: {
+                        height: { duration: 0.3 },
+                        opacity: { duration: 0.2 },
+                        when: "afterChildren"
+                      }
                     }
-                  },
-                  hidden: { 
-                    height: 0, 
-                    opacity: 0,
-                    transition: {
-                      height: { duration: 0.3, ease: "easeIn" },
-                      opacity: { duration: 0.2 },
-                      when: "afterChildren"
-                    }
-                  }
-                }}
-                style={{ overflow: "hidden" }}
-              >
-                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.teacherDesc}</motion.p>
-                <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
-                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
-                    {">"}
-                    {t.codoacodoJob}
-                  </motion.li>
-                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
-                    {">"}
-                    {t.coderhouseJob}
-                  </motion.li>
-                </motion.ul>
-              </motion.div>
-            )}
+                  }}
+                  style={{ overflow: "hidden" }}
+                >
+                  <motion.p variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>{t.teacherDesc}</motion.p>
+                  <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+                    <motion.li variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>
+                      {">"}
+                      {t.codoacodoJob}
+                    </motion.li>
+                    <motion.li variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>
+                      {">"}
+                      {t.coderhouseJob}
+                    </motion.li>
+                  </motion.ul>
+                </motion.div>
+              )}
             </AnimatePresence>
           </li>
 
@@ -384,42 +384,42 @@ export default function Home() {
               </span>
             </button>
             <AnimatePresence>
-            {openSection === "telecom" && (
-              <motion.div
-                className={styles.sectionContent}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={{
-                  visible: { 
-                    height: "auto", 
-                    opacity: 1,
-                    transition: {
-                      height: { duration: 0.4, ease: "easeOut" },
-                      opacity: { duration: 0.3, delay: 0.1 },
-                      staggerChildren: 0.1,
-                      delayChildren: 0.2
+              {openSection === "telecom" && (
+                <motion.div
+                  className={styles.sectionContent}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={{
+                    visible: {
+                      height: "auto",
+                      opacity: 1,
+                      transition: {
+                        height: { type: "spring", stiffness: 100, damping: 20 },
+                        opacity: { duration: 0.3 },
+                        staggerChildren: 0.08,
+                        delayChildren: 0.1
+                      }
+                    },
+                    hidden: {
+                      height: 0,
+                      opacity: 0,
+                      transition: {
+                        height: { duration: 0.3 },
+                        opacity: { duration: 0.2 },
+                        when: "afterChildren"
+                      }
                     }
-                  },
-                  hidden: { 
-                    height: 0, 
-                    opacity: 0,
-                    transition: {
-                      height: { duration: 0.3, ease: "easeIn" },
-                      opacity: { duration: 0.2 },
-                      when: "afterChildren"
-                    }
-                  }
-                }}
-                style={{ overflow: "hidden" }}
-              >
-                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.telecomDesc}</motion.p>
-                <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
-                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{">"}SOTO COMUNICACIONES (2018-2020)</motion.li>
-                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{">"}BOOT ARGENTINA (2014-2018)</motion.li>
-                </motion.ul>
-              </motion.div>
-            )}
+                  }}
+                  style={{ overflow: "hidden" }}
+                >
+                  <motion.p variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>{t.telecomDesc}</motion.p>
+                  <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+                    <motion.li variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>{">"}SOTO COMUNICACIONES (2018-2020)</motion.li>
+                    <motion.li variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>{">"}BOOT ARGENTINA (2014-2018)</motion.li>
+                  </motion.ul>
+                </motion.div>
+              )}
             </AnimatePresence>
           </li>
           <li>
@@ -429,44 +429,44 @@ export default function Home() {
               </span>
             </button>
             <AnimatePresence>
-            {openSection === "dataAnalyst" && (
-              <motion.div
-                className={styles.sectionContent}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={{
-                  visible: { 
-                    height: "auto", 
-                    opacity: 1,
-                    transition: {
-                      height: { duration: 0.4, ease: "easeOut" },
-                      opacity: { duration: 0.3, delay: 0.1 },
-                      staggerChildren: 0.1,
-                      delayChildren: 0.2
+              {openSection === "dataAnalyst" && (
+                <motion.div
+                  className={styles.sectionContent}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={{
+                    visible: {
+                      height: "auto",
+                      opacity: 1,
+                      transition: {
+                        height: { type: "spring", stiffness: 100, damping: 20 },
+                        opacity: { duration: 0.3 },
+                        staggerChildren: 0.08,
+                        delayChildren: 0.1
+                      }
+                    },
+                    hidden: {
+                      height: 0,
+                      opacity: 0,
+                      transition: {
+                        height: { duration: 0.3 },
+                        opacity: { duration: 0.2 },
+                        when: "afterChildren"
+                      }
                     }
-                  },
-                  hidden: { 
-                    height: 0, 
-                    opacity: 0,
-                    transition: {
-                      height: { duration: 0.3, ease: "easeIn" },
-                      opacity: { duration: 0.2 },
-                      when: "afterChildren"
-                    }
-                  }
-                }}
-                style={{ overflow: "hidden" }}
-              >
-                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.dataAnalystDesc}</motion.p>
-                <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
-                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
-                    {">"}
-                    {t.liramaticJob}
-                  </motion.li>
-                </motion.ul>
-              </motion.div>
-            )}
+                  }}
+                  style={{ overflow: "hidden" }}
+                >
+                  <motion.p variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>{t.dataAnalystDesc}</motion.p>
+                  <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+                    <motion.li variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>
+                      {">"}
+                      {t.liramaticJob}
+                    </motion.li>
+                  </motion.ul>
+                </motion.div>
+              )}
             </AnimatePresence>
           </li>
           <li>
@@ -476,52 +476,78 @@ export default function Home() {
               </span>
             </button>
             <AnimatePresence>
-            {openSection === "portfolio" && (
-              <motion.div
-                className={styles.sectionContent}
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                style={{ overflow: "hidden" }}
-              >
-                <p>{t.featuredProjects}</p>
-                <div className={styles.portfolioGrid}>
-                {portfolioItems.map((item, index) => (
-  <motion.div 
-    key={index} 
-    className={styles.portfolioItem}
-    variants={{
-      hidden: { opacity: 0, y: 20 },
-      visible: { 
-        opacity: 1, 
-        y: 0,
-        transition: { delay: index * 0.1 }
-      }
-    }}
-  >
-    <Image src={item.image} alt={item.title} width={400} height={200} />
-    <h3>{item.title}</h3>
-    <p>{item.description}</p>
-    <div className={styles.portfolioLinks}>
-      <a href={item.repo} target="_blank" rel="noopener noreferrer" className={styles.portfolioLink}>
-        <Github size={16} /> Repo
-      </a>
-      <a href={item.link} target="_blank" rel="noopener noreferrer" className={styles.portfolioLink}>
-        <AppWindow size={16} /> Web
-      </a>
-    </div>
-    <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
-      {item.technologies.map((tech, i) => (
-        <TechIcon key={i} icon={tech.icon} name={tech.name} />
-      ))}
-    </div>
-  </motion.div>
-))}
+              {openSection === "portfolio" && (
+                <motion.div
+                  className={styles.sectionContent}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={{
+                    visible: {
+                      height: "auto",
+                      opacity: 1,
+                      transition: {
+                        height: { type: "spring", stiffness: 100, damping: 20 },
+                        opacity: { duration: 0.3 },
+                        staggerChildren: 0.1,
+                        delayChildren: 0.1
+                      }
+                    },
+                    hidden: {
+                      height: 0,
+                      opacity: 0,
+                      transition: {
+                        height: { duration: 0.3 },
+                        opacity: { duration: 0.2 },
+                        when: "afterChildren"
+                      }
+                    }
+                  }}
+                  style={{ overflow: "hidden" }}
+                >
+                  <p>{t.featuredProjects}</p>
+                  <div className={styles.portfolioGrid}>
+                    {portfolioItems.map((item, index) => (
+                      <motion.div
+                        key={index}
+                        className={styles.portfolioItem}
+                        variants={{
+                          hidden: { opacity: 0, scale: 0.8, y: 30 },
+                          visible: {
+                            opacity: 1,
+                            scale: 1,
+                            y: 0,
+                            transition: {
+                              type: "spring",
+                              stiffness: 100,
+                              damping: 15,
+                              delay: index * 0.05
+                            }
+                          }
+                        }}
+                      >
+                        <Image src={item.image} alt={item.title} width={400} height={200} />
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                        <div className={styles.portfolioLinks}>
+                          <a href={item.repo} target="_blank" rel="noopener noreferrer" className={styles.portfolioLink}>
+                            <Github size={16} /> Repo
+                          </a>
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" className={styles.portfolioLink}>
+                            <AppWindow size={16} /> Web
+                          </a>
+                        </div>
+                        <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+                          {item.technologies.map((tech, i) => (
+                            <TechIcon key={i} icon={tech.icon} name={tech.name} />
+                          ))}
+                        </div>
+                      </motion.div>
+                    ))}
 
-                </div>
-              </motion.div>
-            )}
+                  </div>
+                </motion.div>
+              )}
             </AnimatePresence>
           </li>
         </ul>
