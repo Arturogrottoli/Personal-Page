@@ -124,20 +124,20 @@
   align-items: center;
   justify-content: space-between;
   font-family: "Courier", monospace;
-  font-size: 1rem;
-  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  padding: 0.75rem 0.5rem;
   width: 100%;
   text-align: left;
-  transition: color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 2px solid transparent;
 }
 
 .sectionToggle:hover {
   color: #ffffff;
-  text-decoration: none !important;
-}
-
-.sectionToggle:hover span {
-  color: #ffffff;
+  background-color: rgba(51, 255, 51, 0.05);
+  border-left: 2px solid #33ff33;
+  padding-left: 1rem;
+  text-shadow: 0 0 8px #33ff33;
 }
 
 .sectionContent {
@@ -302,19 +302,53 @@
 
 .portfolioItem {
   border: 1px solid #33ff33;
-  padding: 1rem;
+  padding: 1.25rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolioItem::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(51, 255, 51, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.portfolioItem:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #ffffff;
+  box-shadow: 0 0 25px rgba(51, 255, 51, 0.3);
+  z-index: 10;
+}
+
+.portfolioItem:hover::before {
+  opacity: 1;
 }
 
 .portfolioItem img {
   width: 100%;
   height: 200px;
-  margin-bottom: 0.5rem;
-  object-fit: contain;
+  margin-bottom: 1rem;
+  object-fit: cover;
   border: 1px solid #33ff33;
+  transition: transform 0.5s ease;
+}
+
+.portfolioItem:hover img {
+  transform: scale(1.05);
+  border-color: #ffffff;
 }
 
 .portfolioItem h4 {

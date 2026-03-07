@@ -270,42 +270,54 @@ export default function Home() {
             {openSection === "fullstack" && (
               <motion.div
                 className={styles.sectionContent}
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={{
+                  visible: { 
+                    height: "auto", 
+                    opacity: 1,
+                    transition: {
+                      height: { duration: 0.4, ease: "easeOut" },
+                      opacity: { duration: 0.3, delay: 0.1 },
+                      staggerChildren: 0.1,
+                      delayChildren: 0.2
+                    }
+                  },
+                  hidden: { 
+                    height: 0, 
+                    opacity: 0,
+                    transition: {
+                      height: { duration: 0.3, ease: "easeIn" },
+                      opacity: { duration: 0.2 },
+                      when: "afterChildren"
+                    }
+                  }
+                }}
                 style={{ overflow: "hidden" }}
               >
-                <p>{t.fullstackDesc}</p>
-                <ul>
-                  <li>
+                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.fullstackDesc}</motion.p>
+                <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
                     {">"}
                     {t.emonkJob}
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
                     {">"}
                     {t.freelanceJob}
-                  </li>
-                </ul>
-                <p>{t.technologies}</p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "10px" }}>
-                  <TechIcon icon={siHtml5} name="HTML5" />
-                  <TechIcon icon={siCss3} name="CSS3" />
-                  <TechIcon icon={siGithubIcon} name="GitHub" />
-                  <TechIcon icon={siPhp} name="PHP" />
-                  <TechIcon icon={siPython} name="Python" />
-                  <TechIcon icon={siJavascript} name="JavaScript" />
-                  <TechIcon icon={siReact} name="React" />
-                  <TechIcon icon={siMysql} name="MySQL" />
-                  <TechIcon icon={siDjango} name="Django" />
-                  <TechIcon icon={siFlask} name="Flask" />
-                  <TechIcon icon={siNextdotjs} name="Next.js" />
-                  <TechIcon icon={siSass} name="Sass" />
-                  <TechIcon icon={siBootstrap} name="Bootstrap" />
-                  <TechIcon icon={siTypescript} name="Typescript" />
-                  <TechIcon icon={siTailwindcss} name="Tailwind" />
-                  
-                </div>
+                  </motion.li>
+                </motion.ul>
+                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.technologies}</motion.p>
+                <motion.div 
+                  style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "10px" }}
+                  variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.05 } } }}
+                >
+                  {[siHtml5, siCss3, siGithubIcon, siPhp, siPython, siJavascript, siReact, siMysql, siDjango, siFlask, siNextdotjs, siSass, siBootstrap, siTypescript, siTailwindcss].map((icon, i) => (
+                    <motion.div key={i} variants={{ hidden: { scale: 0, opacity: 0 }, visible: { scale: 1, opacity: 1 } }}>
+                      <TechIcon icon={icon} name={icon.title || ""} />
+                    </motion.div>
+                  ))}
+                </motion.div>
               </motion.div>
             )}
             </AnimatePresence>
@@ -321,23 +333,43 @@ export default function Home() {
             {openSection === "teacher" && (
               <motion.div
                 className={styles.sectionContent}
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={{
+                  visible: { 
+                    height: "auto", 
+                    opacity: 1,
+                    transition: {
+                      height: { duration: 0.4, ease: "easeOut" },
+                      opacity: { duration: 0.3, delay: 0.1 },
+                      staggerChildren: 0.1,
+                      delayChildren: 0.2
+                    }
+                  },
+                  hidden: { 
+                    height: 0, 
+                    opacity: 0,
+                    transition: {
+                      height: { duration: 0.3, ease: "easeIn" },
+                      opacity: { duration: 0.2 },
+                      when: "afterChildren"
+                    }
+                  }
+                }}
                 style={{ overflow: "hidden" }}
               >
-                <p>{t.teacherDesc}</p>
-                <ul>
-                  <li>
+                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.teacherDesc}</motion.p>
+                <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
                     {">"}
                     {t.codoacodoJob}
-                  </li>
-                  <li>
+                  </motion.li>
+                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
                     {">"}
                     {t.coderhouseJob}
-                  </li>
-                </ul>
+                  </motion.li>
+                </motion.ul>
               </motion.div>
             )}
             </AnimatePresence>
@@ -355,17 +387,37 @@ export default function Home() {
             {openSection === "telecom" && (
               <motion.div
                 className={styles.sectionContent}
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={{
+                  visible: { 
+                    height: "auto", 
+                    opacity: 1,
+                    transition: {
+                      height: { duration: 0.4, ease: "easeOut" },
+                      opacity: { duration: 0.3, delay: 0.1 },
+                      staggerChildren: 0.1,
+                      delayChildren: 0.2
+                    }
+                  },
+                  hidden: { 
+                    height: 0, 
+                    opacity: 0,
+                    transition: {
+                      height: { duration: 0.3, ease: "easeIn" },
+                      opacity: { duration: 0.2 },
+                      when: "afterChildren"
+                    }
+                  }
+                }}
                 style={{ overflow: "hidden" }}
               >
-                <p>{t.telecomDesc}</p>
-                <ul>
-                  <li>{">"}SOTO COMUNICACIONES (2018-2020)</li>
-                  <li>{">"}BOOT ARGENTINA (2014-2018)</li>
-                </ul>
+                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.telecomDesc}</motion.p>
+                <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{">"}SOTO COMUNICACIONES (2018-2020)</motion.li>
+                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{">"}BOOT ARGENTINA (2014-2018)</motion.li>
+                </motion.ul>
               </motion.div>
             )}
             </AnimatePresence>
@@ -380,19 +432,39 @@ export default function Home() {
             {openSection === "dataAnalyst" && (
               <motion.div
                 className={styles.sectionContent}
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={{
+                  visible: { 
+                    height: "auto", 
+                    opacity: 1,
+                    transition: {
+                      height: { duration: 0.4, ease: "easeOut" },
+                      opacity: { duration: 0.3, delay: 0.1 },
+                      staggerChildren: 0.1,
+                      delayChildren: 0.2
+                    }
+                  },
+                  hidden: { 
+                    height: 0, 
+                    opacity: 0,
+                    transition: {
+                      height: { duration: 0.3, ease: "easeIn" },
+                      opacity: { duration: 0.2 },
+                      when: "afterChildren"
+                    }
+                  }
+                }}
                 style={{ overflow: "hidden" }}
               >
-                <p>{t.dataAnalystDesc}</p>
-                <ul>
-                  <li>
+                <motion.p variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>{t.dataAnalystDesc}</motion.p>
+                <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
+                  <motion.li variants={{ hidden: { opacity: 0, x: -10 }, visible: { opacity: 1, x: 0 } }}>
                     {">"}
                     {t.liramaticJob}
-                  </li>
-                </ul>
+                  </motion.li>
+                </motion.ul>
               </motion.div>
             )}
             </AnimatePresence>
@@ -416,7 +488,18 @@ export default function Home() {
                 <p>{t.featuredProjects}</p>
                 <div className={styles.portfolioGrid}>
                 {portfolioItems.map((item, index) => (
-  <div key={index} className={styles.portfolioItem}>
+  <motion.div 
+    key={index} 
+    className={styles.portfolioItem}
+    variants={{
+      hidden: { opacity: 0, y: 20 },
+      visible: { 
+        opacity: 1, 
+        y: 0,
+        transition: { delay: index * 0.1 }
+      }
+    }}
+  >
     <Image src={item.image} alt={item.title} width={400} height={200} />
     <h3>{item.title}</h3>
     <p>{item.description}</p>
@@ -433,7 +516,7 @@ export default function Home() {
         <TechIcon key={i} icon={tech.icon} name={tech.name} />
       ))}
     </div>
-  </div>
+  </motion.div>
 ))}
 
                 </div>
