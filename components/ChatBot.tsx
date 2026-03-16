@@ -44,16 +44,26 @@ export default function ChatBot() {
                         content: m.content,
                     })),
                 }),
-            })
+            }).catch((err) => {
+                console.error("Fetch Network Error:", err);
+                throw new Error("Network request failed");
+            });
+            
+            let data;
+            try {
+                data = await response.json();
+            } catch (e) {
+                console.error("Failed to parse JSON response");
+                throw new Error("Invalid JSON response");
+            }
 
-            const data = await response.json()
-            if (data.message) {
+            if (data && data.message) {
                 setMessages((prev) => [...prev, { role: "bot", content: data.message }])
             } else {
                 setMessages((prev) => [...prev, { role: "bot", content: "Lo siento, tuve un problema al procesar tu mensaje. Por favor intenta de nuevo." }])
             }
         } catch (error) {
-            console.error("Chat Error:", error)
+            console.error("Chat Error Context:", error)
             setMessages((prev) => [...prev, { role: "bot", content: "Hubo un error de conexión. Podés contactar a Arturo directamente en arturogrottoli@gmail.com" }])
         } finally {
             setIsLoading(false)
