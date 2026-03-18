@@ -103,6 +103,7 @@ export default function Home() {
       link: "https://setlistfm-to-spotify.vercel.app/",
       repo: "https://github.com/Arturogrottoli/setlistfm-to-spotify",
       technologies: [
+        { icon: siNextdotjs, name: "Next.js" },
         { icon: siReact, name: "React" },
         { icon: siPwa, name: "PWA" },
         { icon: siTailwindcss, name: "Tailwind" }
@@ -115,9 +116,9 @@ export default function Home() {
       link: "https://transportecoco.vercel.app/",
       repo: "https://github.com/Arturogrottoli/transportescoco",
       technologies: [
+        { icon: siNextdotjs, name: "Next.js" },
         { icon: siReact, name: "React" },
-        { icon: siCss3, name: "CSS3" },
-        { icon: siBootstrap, name: "Bootstrap" }
+        { icon: siTailwindcss, name: "Tailwind" }
       ],
     },
     {
@@ -127,9 +128,9 @@ export default function Home() {
       link: "https://dibujantis.vercel.app/",
       repo: "https://github.com/Arturogrottoli/Dibujantis",
       technologies: [
+        { icon: siNextdotjs, name: "Next.js" },
         { icon: siReact, name: "React" },
-        { icon: siCss3, name: "CSS3" },
-        { icon: siBootstrap, name: "Bootstrap" }
+        { icon: siTailwindcss, name: "Tailwind" }
       ],
     },
     {
@@ -157,7 +158,7 @@ export default function Home() {
       ],
     },
     {
-      title: "Ecommerce React",
+      title: "Ecommerce React with API",
       description: "E-commerce of products fetched from a generic API.",
       image: "https://i.ibb.co/k2q9KR2G/tiendaonline.png",
       link: "https://possible-hook.surge.sh/",
@@ -216,8 +217,7 @@ export default function Home() {
       technologies: [
         { icon: siHtml5, name: "HTML5" },
         { icon: siCss3, name: "CSS3" },
-        { icon: siJavascript, name: "JavaScript" },
-        { icon: siTailwindcss, name: "Tailwind" }
+        { icon: siJavascript, name: "JavaScript" }
       ],
     },
   ]
@@ -526,7 +526,13 @@ export default function Home() {
                           }
                         }}
                       >
-                        <Image src={item.image} alt={item.title} width={400} height={200} />
+                        <Image 
+                          src={item.image} 
+                          alt={item.title} 
+                          width={400} 
+                          height={200}
+                          priority={index < 4}
+                        />
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
                         <div className={styles.portfolioLinks}>

@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic';
+
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
 const SYSTEM_PROMPT = `Sos el asistente virtual del portfolio de Arturo Grottoli. Respondé preguntas sobre su perfil profesional de manera amigable, concisa y en el idioma que te hablen (español o inglés).
