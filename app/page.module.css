@@ -152,6 +152,12 @@
   margin-top: 0.5rem;
 }
 
+.sectionContent ul li {
+  white-space: pre-line;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
 .sectionContent ul li::before {
   content: "";
   margin-right: 0.5rem;

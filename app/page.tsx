@@ -296,7 +296,6 @@ export default function Home() {
                   }}
                   style={{ overflow: "hidden" }}
                 >
-                  <motion.p variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>{t.fullstackDesc}</motion.p>
                   <motion.ul variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}>
                     <motion.li variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 120 } } }}>
                       {">"}
