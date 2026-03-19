@@ -45,6 +45,11 @@ body {
   position: relative;
 }
 
+/* Ocultamos el logo de Next que aparece en algunos previews/debug tools */
+#next-logo {
+  display: none !important;
+}
+
 .main {
   background-color: #000;
   color: #33ff33;

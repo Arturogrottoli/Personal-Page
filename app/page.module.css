@@ -328,22 +328,38 @@
 }
 
 .portfolioItem:hover {
-  transform: translateY(-10px) scale(1.05);
   border-color: #ffffff;
   box-shadow: 0 10px 30px rgba(51, 255, 51, 0.4), 0 0 15px rgba(255, 255, 255, 0.2);
   z-index: 10;
   background: rgba(0, 0, 0, 0.8);
+  animation: portfolioHoverWave 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
 .portfolioItem:hover::before {
   opacity: 1;
 }
 
+@keyframes portfolioHoverWave {
+  0% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-7.5px) scale(1.035) rotate(0.03deg);
+  }
+  60% {
+    transform: translateY(-9px) scale(1.045) rotate(0.05deg);
+  }
+  100% {
+    transform: translateY(-10px) scale(1.05) rotate(0deg);
+  }
+}
+
 .portfolioItem img {
   width: 100%;
   height: 180px;
   margin-bottom: 1rem;
-  object-fit: contain;
+  object-fit: contain !important;
   background-color: rgba(51, 255, 51, 0.03);
   padding: 0.5rem;
   border: 1px solid #33ff33;
@@ -351,7 +367,8 @@
 }
 
 .portfolioItem:hover img {
-  transform: scale(1.08);
+  /* Evita que al pasar el mouse se recorte/zooméee la imagen */
+  transform: none;
   border-color: #fff;
   box-shadow: 0 0 15px rgba(51, 255, 51, 0.3);
 }

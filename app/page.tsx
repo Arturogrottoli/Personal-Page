@@ -526,12 +526,14 @@ export default function Home() {
                           }
                         }}
                       >
-                        <Image 
-                          src={item.image} 
-                          alt={item.title} 
-                          width={400} 
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          width={400}
                           height={200}
                           priority={index < 4}
+                          // Forzamos el fit para que no se recorte (evita el "zoom feo").
+                          style={{ width: "100%", height: "180px", objectFit: "contain" }}
                         />
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>

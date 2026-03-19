@@ -109,6 +109,13 @@ export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json();
 
+    if (!GROQ_API_KEY) {
+      return NextResponse.json(
+        { message: "AG Assistant no está configurado: falta `GROQ_API_KEY` en Vercel." },
+        { status: 500 }
+      );
+    }
+
     const conversationMessages = messages.map((m: { role: string; content: string }) => ({
       role: m.role === 'assistant' ? 'assistant' : 'user',
       content: m.content,
@@ -131,9 +138,32 @@ export async function POST(req: NextRequest) {
       }),
     });
 
-    const data = await response.json();
-    const text = data.choices?.[0]?.message?.content || 'No pude responder, intentá de nuevo.';
-    return NextResponse.json({ message: text });
+    let data: any;
+    try {
+      data = await response.json();
+    } catch {
+      const raw = await response.text().catch(() => "");
+      console.error("Groq returned non-JSON:", response.status, raw);
+      return NextResponse.json(
+        { message: "No pude responder, intentá de nuevo." },
+        { status: 500 }
+      );
+    }
+
+    const text = data?.choices?.[0]?.message?.content;
+    const apiErrorMessage =
+      typeof data?.error?.message === "string" ? data.error.message : undefined;
+
+    if (!text && !apiErrorMessage) {
+      console.error("Groq response payload did not contain choices:", {
+        status: response.status,
+        data,
+      });
+    }
+
+    return NextResponse.json({
+      message: text || apiErrorMessage || 'No pude responder, intentá de nuevo.'
+    });
   } catch (error) {
     console.error('Error:', error);
     return NextResponse.json({ error: 'Error interno' }, { status: 500 });

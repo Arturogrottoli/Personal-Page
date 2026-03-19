@@ -59,6 +59,8 @@ export default function ChatBot() {
 
             if (data && data.message) {
                 setMessages((prev) => [...prev, { role: "bot", content: data.message }])
+            } else if (data && data.error) {
+                setMessages((prev) => [...prev, { role: "bot", content: String(data.error) }])
             } else {
                 setMessages((prev) => [...prev, { role: "bot", content: "Lo siento, tuve un problema al procesar tu mensaje. Por favor intenta de nuevo." }])
             }
