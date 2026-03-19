@@ -309,9 +309,14 @@
   align-items: center;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition:
+    border-color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  transform: translateY(0px);
 }
 
 .portfolioItem::before {
@@ -323,7 +328,26 @@
   height: 200%;
   background: radial-gradient(circle, rgba(51, 255, 51, 0.1) 0%, transparent 70%);
   opacity: 0;
-  transition: opacity 0.3s;
+  transform: translate(-6%, -6%) scale(1);
+  transition:
+    opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.portfolioItem::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -20%;
+  width: 140%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(51, 255, 51, 0.9) 50%, transparent 100%);
+  opacity: 0;
+  transform: translateX(-12px);
+  transition:
+    opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
 }
 
@@ -332,27 +356,17 @@
   box-shadow: 0 10px 30px rgba(51, 255, 51, 0.4), 0 0 15px rgba(255, 255, 255, 0.2);
   z-index: 10;
   background: rgba(0, 0, 0, 0.8);
-  animation: portfolioHoverWave 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform;
+  transform: translateY(-6px);
 }
 
 .portfolioItem:hover::before {
   opacity: 1;
+  transform: translate(6%, -2%) scale(1.06);
 }
 
-@keyframes portfolioHoverWave {
-  0% {
-    transform: translateY(0px) scale(1) rotate(0deg);
-  }
-  30% {
-    transform: translateY(-7.5px) scale(1.035) rotate(0.03deg);
-  }
-  60% {
-    transform: translateY(-9px) scale(1.045) rotate(0.05deg);
-  }
-  100% {
-    transform: translateY(-10px) scale(1.05) rotate(0deg);
-  }
+.portfolioItem:hover::after {
+  opacity: 0.85;
+  transform: translateX(0);
 }
 
 .portfolioItem img {
