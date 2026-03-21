@@ -23,7 +23,10 @@ import {
   siFirebase,
   siTypescript,
   siTailwindcss,
-  siPwa
+  siPwa,
+  siNodedotjs,
+  siDocker,
+  siAngular,
 } from "simple-icons"
 
 interface IconType {
@@ -311,7 +314,7 @@ export default function Home() {
                     style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "10px" }}
                     variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.04 } } }}
                   >
-                    {[siHtml5, siCss3, siGithubIcon, siPhp, siPython, siJavascript, siReact, siMysql, siDjango, siFlask, siNextdotjs, siSass, siBootstrap, siTypescript, siTailwindcss].map((icon, i) => (
+                    {[siReact, siNextdotjs, siTypescript, siJavascript, siAngular, siNodedotjs, siPython, siPhp, siMysql, siDjango, siFlask, siDocker, siFirebase, siTailwindcss, siBootstrap, siSass, siHtml5, siCss3, siPwa, siGithubIcon].map((icon, i) => (
                       <motion.div key={i} variants={{ hidden: { scale: 0, opacity: 0, rotate: -15 }, visible: { scale: 1, opacity: 1, rotate: 0, transition: { type: "spring", stiffness: 200 } } }}>
                         <TechIcon icon={icon} name={icon.title || ""} />
                       </motion.div>

@@ -77,7 +77,8 @@ Ecommerce Admin - Oro Commerce:
 -B2B platform management: users, clients, permissions, and content.
 -Management of pages, covers, and translations through CMS.`,
     freelanceJob: `Freelance (2020-present)
-- Custom websites and applications for different clients: landing pages/advertising sites, corporate websites, e-commerce, and React/Next.js web apps; API integrations, forms, automations, and deployments across multiple platforms based on project needs.`,
+- Custom websites and applications for different clients: landing pages/advertising sites, corporate websites, e-commerce, and React/Next.js web apps.
+- API integrations, forms, automations, and deployments across multiple platforms based on project needs.`,
     liramaticJob: "Liramatic (2021-present) - Generation of reports for vehicle fleets using Power BI dashboards.",
     codoacodoJob: "Full Stack Python Course Professor at Codo a Codo (2021-2024)",
     coderhouseJob: "Coderhouse tutor for Web Development, JavaScript, React.js, AI automation, and SQL (2021-present)",
