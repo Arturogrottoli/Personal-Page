@@ -34,7 +34,8 @@ Ecommerce Admin - Oro Commerce:
 -Gestión de plataforma B2B: usuarios, clientes, permisos y contenido.
 -Administración de páginas, portadas y traducciones mediante CMS.`,
     freelanceJob: `Freelance (2020-actual)
-- Desarrollo de sitios y aplicaciones a medida para distintos clientes: landings/publicidad, sitios corporativos, e-commerce y apps web en React/Next.js; integración con APIs, formularios, automatizaciones y despliegues en múltiples plataformas según necesidad del proyecto.`,
+- Desarrollo de sitios y aplicaciones a medida para distintos clientes: landings/publicidad, sitios corporativos, e-commerce y apps web en React/Next.js;
+- Integración con APIs, formularios, automatizaciones y despliegues en múltiples plataformas según necesidad del proyecto.`,
     liramaticJob:
       "Liramatic (2021-actual) - Generación de reportes para flotas vehiculares mediante tableros Power BI.",
     codoacodoJob: "Profesor curso Full Stack Python Codo a codo (2021-2024)",
