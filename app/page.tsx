@@ -71,7 +71,7 @@ export default function Home() {
       technologies: [
         { icon: siReact, name: "React Native" },
         { icon: siTypescript, name: "TypeScript" },
-        { icon: siJavascript, name: "Node.js" },
+        { icon: siNodedotjs, name: "Node.js" },
       ],
     },
     {
@@ -145,7 +145,7 @@ export default function Home() {
       technologies: [
         { icon: siTypescript, name: "Typescript" },
         { icon: siTailwindcss, name: "Tailwind" },
-        { icon: siReact, name: "Next.js" },
+        { icon: siNextdotjs, name: "Next.js" },
       ],
     },
     {
