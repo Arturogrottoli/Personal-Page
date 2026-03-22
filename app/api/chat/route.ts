@@ -19,7 +19,7 @@ Profesional IT con más de 5 años en desarrollo y más de 10 años en el sector
   -Desarrollo de funcionalidades full-stack, mejoras de UI/UX y resolución de bugs.
   -Implementación de cargas asincrónicas (AJAX), filtros dinámicos y exportación de datos (CSV).
   -Automatización de notificaciones e integración con APIs externas (Slack, Mailchimp).
-  -Integración con herramientas del ecosistema (Odoo).
+  -Integración con herramientas del ecosistema.
 
   Stack: PHP · JavaScript · SQL · AJAX · Docker · REST · Git
 
