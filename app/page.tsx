@@ -63,6 +63,19 @@ export default function Home() {
   const portfolioItems = [
 
     {
+      title: "EPUBify",
+      description: "Convert PDFs, articles, emails and text into EPUB files ready for any e-reader.",
+      image: "https://i.ibb.co/Kx6X2t7n/epub.png",
+      link: "https://turiepubify.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/Kindlify",
+      technologies: [
+        { icon: siNextdotjs, name: "Next.js" },
+        { icon: siTypescript, name: "TypeScript" },
+        { icon: siTailwindcss, name: "Tailwind" },
+        { icon: siPwa, name: "PWA" },
+      ],
+    },
+    {
       title: "Plant App",
       description: "Mobile app to identify plants using AI.",
       image: "https://i.ibb.co/ynCMfrYk/Whats-App-Image-2026-03-03-at-6-56-47-PM.jpg",
