@@ -65,7 +65,7 @@ export default function Home() {
     {
       title: "Corazon Verde",
       description: "Farm-raised chickens raised naturally",
-      image: "https://i.ibb.co/9kMt9J5T/corazonverde.png",
+      image: "https://i.ibb.co/Gy94FQs/corazonverde.png",
       link: "https://corazonverde.vercel.app/",
       repo: "https://github.com/Arturogrottoli/corazonverde",
       technologies: [
@@ -85,6 +85,18 @@ export default function Home() {
         { icon: siTypescript, name: "TypeScript" },
         { icon: siTailwindcss, name: "Tailwind" },
         { icon: siPwa, name: "PWA" },
+      ],
+    },
+    {
+      title: "Dibujantis Portfolio",
+      description: "Portfolio of the illustrator Dibujantis",
+      image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
+      link: "https://dibujantis.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/Dibujantis",
+      technologies: [
+        { icon: siNextdotjs, name: "Next.js" },
+        { icon: siReact, name: "React" },
+        { icon: siTailwindcss, name: "Tailwind" }
       ],
     },
     {
@@ -131,18 +143,6 @@ export default function Home() {
       image: "https://i.ibb.co/dsVbsWyN/cocotransporte.png",
       link: "https://transportecoco.vercel.app/",
       repo: "https://github.com/Arturogrottoli/transportescoco",
-      technologies: [
-        { icon: siNextdotjs, name: "Next.js" },
-        { icon: siReact, name: "React" },
-        { icon: siTailwindcss, name: "Tailwind" }
-      ],
-    },
-    {
-      title: "Dibujantis Portfolio",
-      description: "Portfolio of the illustrator Dibujantis",
-      image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
-      link: "https://dibujantis.vercel.app/",
-      repo: "https://github.com/Arturogrottoli/Dibujantis",
       technologies: [
         { icon: siNextdotjs, name: "Next.js" },
         { icon: siReact, name: "React" },
@@ -546,8 +546,8 @@ export default function Home() {
                           alt={item.title}
                           width={400}
                           height={200}
+                          unoptimized
                           priority={index < 4}
-                          // Forzamos el fit para que no se recorte (evita el "zoom feo").
                           style={{ width: "100%", height: "180px", objectFit: "contain" }}
                         />
                         <h3>{item.title}</h3>
