@@ -76,7 +76,7 @@ export default function Home() {
     },
     {
       title: "EPUBify",
-      description: "Convert PDFs, articles, emails and text into EPUB files ready for any e-reader.",
+      description: "Convert PDFs, articles, emails and text into EPUB files.",
       image: "https://i.ibb.co/Kx6X2t7n/epub.png",
       link: "https://turiepubify.vercel.app/",
       repo: "https://github.com/Arturogrottoli/Kindlify",
@@ -93,6 +93,31 @@ export default function Home() {
       image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
       link: "https://dibujantis.vercel.app/",
       repo: "https://github.com/Arturogrottoli/Dibujantis",
+      technologies: [
+        { icon: siNextdotjs, name: "Next.js" },
+        { icon: siReact, name: "React" },
+        { icon: siTailwindcss, name: "Tailwind" }
+      ],
+    },
+    {
+      title: "Setlistfm to Spotify",
+      description: "Converts shows from Setlist.fm into Spotify playlists",
+      image: "https://i.ibb.co/tpztnSs8/setlisttospoty.png",
+      link: "https://setlistfm-to-spotify.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/setlistfm-to-spotify",
+      technologies: [
+        { icon: siNextdotjs, name: "Next.js" },
+        { icon: siReact, name: "React" },
+        { icon: siPwa, name: "PWA" },
+        { icon: siTailwindcss, name: "Tailwind" }
+      ],
+    },
+    {
+      title: "Transportes CoCo",
+      description: "Transportation company for people and pets.",
+      image: "https://i.ibb.co/dsVbsWyN/cocotransporte.png",
+      link: "https://transportecoco.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/transportescoco",
       technologies: [
         { icon: siNextdotjs, name: "Next.js" },
         { icon: siReact, name: "React" },
@@ -122,31 +147,6 @@ export default function Home() {
         { icon: siPwa, name: "PWA" },
         { icon: siTailwindcss, name: "Tailwind" },
         { icon: siPython, name: "Python" }
-      ],
-    },
-    {
-      title: "Setlistfm to Spotify",
-      description: "Converts shows from Setlist.fm into Spotify playlists",
-      image: "https://i.ibb.co/tpztnSs8/setlisttospoty.png",
-      link: "https://setlistfm-to-spotify.vercel.app/",
-      repo: "https://github.com/Arturogrottoli/setlistfm-to-spotify",
-      technologies: [
-        { icon: siNextdotjs, name: "Next.js" },
-        { icon: siReact, name: "React" },
-        { icon: siPwa, name: "PWA" },
-        { icon: siTailwindcss, name: "Tailwind" }
-      ],
-    },
-    {
-      title: "Transportes CoCo",
-      description: "Transportation company for people and pets.",
-      image: "https://i.ibb.co/dsVbsWyN/cocotransporte.png",
-      link: "https://transportecoco.vercel.app/",
-      repo: "https://github.com/Arturogrottoli/transportescoco",
-      technologies: [
-        { icon: siNextdotjs, name: "Next.js" },
-        { icon: siReact, name: "React" },
-        { icon: siTailwindcss, name: "Tailwind" }
       ],
     },
     {
@@ -540,6 +540,8 @@ export default function Home() {
                             }
                           }
                         }}
+                        whileHover={{ scale: 1.04, y: -6 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
                       >
                         <Image
                           src={item.image}
