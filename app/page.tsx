@@ -63,6 +63,18 @@ export default function Home() {
   const portfolioItems = [
 
     {
+      title: "Corazon Verde",
+      description: "Farm-raised chickens raised naturally",
+      image: "https://i.ibb.co/9kMt9J5T/corazonverde.png",
+      link: "https://corazonverde.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/corazonverde",
+      technologies: [
+        { icon: siNextdotjs, name: "Next.js" },
+        { icon: siCss3, name: "CSS3" },
+        { icon: siTailwindcss, name: "Tailwind" }
+      ],
+    },
+    {
       title: "EPUBify",
       description: "Convert PDFs, articles, emails and text into EPUB files ready for any e-reader.",
       image: "https://i.ibb.co/Kx6X2t7n/epub.png",
@@ -98,18 +110,6 @@ export default function Home() {
         { icon: siPwa, name: "PWA" },
         { icon: siTailwindcss, name: "Tailwind" },
         { icon: siPython, name: "Python" }
-      ],
-    },
-    {
-      title: "Corazon Verde",
-      description: "Farm-raised chickens raised naturally",
-      image: "https://i.ibb.co/KxmqFsm6/corazon-verde.png",
-      link: "https://corazonverde.vercel.app/",
-      repo: "https://github.com/Arturogrottoli/corazonverde",
-      technologies: [
-        { icon: siNextdotjs, name: "Next.js" },
-        { icon: siCss3, name: "CSS3" },
-        { icon: siTailwindcss, name: "Tailwind" }
       ],
     },
     {
