@@ -79,7 +79,7 @@ export default function Home() {
       description: "Convert PDFs, articles, emails and text into EPUB files.",
       image: "https://i.ibb.co/Kx6X2t7n/epub.png",
       link: "https://turiepubify.vercel.app/",
-      repo: "https://github.com/Arturogrottoli/Kindlify",
+      repo: "https://github.com/Arturogrottoli/Epubify",
       technologies: [
         { icon: siNextdotjs, name: "Next.js" },
         { icon: siTypescript, name: "TypeScript" },
