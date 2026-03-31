@@ -70,6 +70,8 @@
   text-decoration: none;
   animation: pulse-glow 2s infinite;
   white-space: nowrap;
+  height: 2rem;
+  box-sizing: border-box;
 }
 
 .downloadBtnHeader:hover {
@@ -96,7 +98,8 @@
   align-items: center;
   gap: 0.5rem;
   transition: background-color 0.3s ease, color 0.3s ease;
-  align-self: stretch;
+  height: 2rem;
+  box-sizing: border-box;
 }
 
 .languageToggle:hover {
