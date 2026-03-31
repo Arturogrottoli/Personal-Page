@@ -18,21 +18,13 @@ export const translations = {
     technologies: "Tecnologías:",
     career: "Trayectoria:",
     socialLinks: "RRSS:",
-    emonkJob: `Emonk (2022-actual)
-Full-Stack Developer:
--Desarrollo sobre sistema propio de gestión de comercio exterior con 4 módulos interconectados (Quotes, Seller, Swift, Logistic) y base de datos compartida.
--Arquitectura multi-repositorio (GitHub) orquestada con Docker y API REST propia.
+    emonkJob: `Emonk (2022-actual) — Full-Stack Developer
 
--Desarrollo de funcionalidades full-stack, mejoras de UI/UX y resolución de bugs.
--Implementación de cargas asincrónicas (AJAX), filtros dinámicos y exportación de datos (CSV).
--Automatización de notificaciones e integración con APIs externas (Slack, Mailchimp).
--Integración con herramientas del ecosistema.
+Trabajo sobre sistema interno de gestión de comercio exterior con 4 módulos (Quotes, Seller, Swift, Logistic): desarrollo de funcionalidades, mejoras de UI/UX, resolución de bugs y automatización mediante integración con librerías y servicios externos como Slack y Mailchimp.
 
-Stack: PHP · JavaScript · SQL · AJAX · Docker · REST · Git
+Stack: PHP · JS · SQL · AJAX · Docker · REST · Git
 
-Ecommerce Admin - Oro Commerce:
--Gestión de plataforma B2B: usuarios, clientes, permisos y contenido.
--Administración de páginas, portadas y traducciones mediante CMS.`,
+Administración de plataforma B2B OroCommerce: usuarios, permisos, catálogo y CMS.`,
     freelanceJob: `Freelance (2020-actual)
 - Desarrollo de sitios y aplicaciones a medida para distintos clientes: landings/publicidad, sitios corporativos, e-commerce y apps web en React/Next.js;
 - Integración con APIs, formularios, automatizaciones y despliegues en múltiples plataformas según necesidad del proyecto.`,
