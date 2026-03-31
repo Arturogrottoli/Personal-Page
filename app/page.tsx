@@ -89,7 +89,7 @@ export default function Home() {
     },
     {
       title: "Dibujantis Portfolio",
-      description: "Portfolio of the illustrator Dibujantis",
+      description: "Illustration portfolio website for Dibujantis",
       image: "https://i.ibb.co/KckSS8R8/dibujantis.png",
       link: "https://dibujantis.vercel.app/",
       repo: "https://github.com/Arturogrottoli/Dibujantis",
@@ -262,6 +262,10 @@ export default function Home() {
             <Globe size={18} />
             {language === "es" ? "EN" : "ES"}
           </button>
+          <a href={cvLinks[language]} target="_blank" rel="noopener noreferrer" className={styles.downloadBtnHeader}>
+            <Download size={16} />
+            {language === "es" ? "Descargar CV" : "Download CV"}
+          </a>
         </div>
       </div>
 
@@ -577,19 +581,11 @@ export default function Home() {
           </li>
         </ul>
 
-        <div className={styles.buttons}>
-          <a href={cvLinks[language]} target="_blank" rel="noopener noreferrer" className={styles.downloadBtn}>
-            <span>{t.downloadCV}</span>
-            <Download size={18} />
-          </a>
-        </div>
-
-        <div className={styles.socialLinks}>
-          <h3>{t.socialLinks}</h3>
-          <a href="https://github.com/Arturogrottoli" target="_blank" rel="noopener noreferrer">
+        <div className={styles.contactInfo}>
+          <a href="https://github.com/Arturogrottoli" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
             <Github size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/arturo-grottoli/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/arturo-grottoli/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
             <Linkedin size={24} />
           </a>
         </div>
