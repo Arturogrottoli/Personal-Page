@@ -5,7 +5,7 @@ export const translations = {
     dataAnalyst: "Analista de Datos",
     dataAnalystDesc:
       "Experiencia en análisis y procesamiento de grandes volúmenes de información, utilizando SQL y Python para la manipulación y visualización de datos.",
-    teacher: "Docente",
+    teacher: "Profesor y Tutor",
     teacherDesc: "Instructor y tutor en diversos lenguajes de programación:",
     telecom: "Profesional de las Telecomunicaciones",
     telecomMobile: "PM Telecomunicaciones",
@@ -31,7 +31,7 @@ Administración de plataforma B2B OroCommerce: usuarios, permisos, catálogo y C
     liramaticJob:
       "Liramatic (2021-actual) - Generación de reportes para flotas vehiculares mediante tableros Power BI.",
     codoacodoJob: "Profesor curso Full Stack Python Codo a codo (2021-2024)",
-    coderhouseJob: "Tutor en Coderhouse para cursos Desarrollo web, Javascript, Reactjs, AI automation, Data Science y SQL (2021-actualidad)",
+    coderhouseJob: "Profesor y Tutor en Coderhouse para cursos Desarrollo web, Javascript, Reactjs, AI automation, Data Science y SQL (2021-actualidad)",
     featuredProjects: "Proyectos destacados:",
   },
   en: {
@@ -40,7 +40,7 @@ Administración de plataforma B2B OroCommerce: usuarios, permisos, catálogo y C
     dataAnalyst: "Data Analyst",
     dataAnalystDesc:
       "Experience in analyzing and processing large volumes of information, using SQL and Python for data manipulation and visualization.",
-    teacher: "Teacher",
+    teacher: "Professor and Tutor",
     teacherDesc: "Instructor and mentor in various programming languages:",
     telecom: "Telecommunications Professional",
     telecomMobile: "Telecom PM",
@@ -73,7 +73,7 @@ Ecommerce Admin - Oro Commerce:
 - API integrations, forms, automations, and deployments across multiple platforms based on project needs.`,
     liramaticJob: "Liramatic (2021-present) - Generation of reports for vehicle fleets using Power BI dashboards.",
     codoacodoJob: "Full Stack Python Course Professor at Codo a Codo (2021-2024)",
-    coderhouseJob: "Coderhouse tutor for Web Development, JavaScript, React.js, AI automation, and SQL (2021-present)",
+    coderhouseJob: "Professor and Tutor at Coderhouse for Web Development, JavaScript, React.js, AI Automation, Data Science, and SQL courses (2021-present)",
     featuredProjects: "Featured projects:",
   },
 }
