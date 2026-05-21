@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import styles from "./page.module.css"
@@ -46,21 +46,7 @@ const TechIcon = ({ icon, name }: { icon: IconType; name: string }) => (
 );
 
 
-export default function Home() {
-  const [openSection, setOpenSection] = useState<string | null>(null)
-  const [language, setLanguage] = useState<"es" | "en">("es")
-
-  const toggleSection = (section: string) => {
-    setOpenSection(openSection === section ? null : section)
-  }
-
-  const toggleLanguage = () => {
-    setLanguage(language === "es" ? "en" : "es")
-  }
-
-  const t = translations[language]
-
-  const portfolioItems = [
+const portfolioItems = [
 
     {
       title: "Corazon Verde",
@@ -238,6 +224,32 @@ export default function Home() {
     },
   ]
 
+export default function Home() {
+  const [openSection, setOpenSection] = useState<string | null>(null)
+  const [language, setLanguage] = useState<"es" | "en">("es")
+  const [portfolioImagesLoaded, setPortfolioImagesLoaded] = useState(false)
+
+  useEffect(() => {
+    let loaded = 0
+    const total = portfolioItems.length
+    portfolioItems.forEach(({ image }) => {
+      const img = new window.Image()
+      img.onload = img.onerror = () => {
+        if (++loaded === total) setPortfolioImagesLoaded(true)
+      }
+      img.src = image
+    })
+  }, [])
+
+  const toggleSection = (section: string) => {
+    setOpenSection(openSection === section ? null : section)
+  }
+
+  const toggleLanguage = () => {
+    setLanguage(language === "es" ? "en" : "es")
+  }
+
+  const t = translations[language]
 
   const cvLinks = {
     es: "https://drive.google.com/file/d/1ga0Xbs_w5VIdSnmIEWLlTpoU8htanfyf/view?usp=sharing",
@@ -525,6 +537,12 @@ export default function Home() {
                   style={{ overflow: "hidden" }}
                 >
                   <p>{t.featuredProjects}</p>
+                  {!portfolioImagesLoaded ? (
+                    <div className={styles.portfolioLoading}>
+                      <div className={styles.portfolioSpinner} />
+                      <span>Cargando proyectos...</span>
+                    </div>
+                  ) : (
                   <div className={styles.portfolioGrid}>
                     {portfolioItems.map((item, index) => (
                       <motion.div
@@ -553,7 +571,7 @@ export default function Home() {
                           width={400}
                           height={200}
                           unoptimized
-                          priority={index < 4}
+                          priority
                           style={{ width: "100%", height: "180px", objectFit: "contain" }}
                         />
                         <h3>{item.title}</h3>
@@ -575,6 +593,7 @@ export default function Home() {
                     ))}
 
                   </div>
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>
