@@ -20,17 +20,13 @@ export const translations = {
     socialLinks: "RRSS:",
     emonkJob: `Emonk · Full-Stack Developer · 2022 – actualidad
 
-Frontend:
-· Desarrollo responsive para múltiples plataformas internas interconectadas
-· Componentes reutilizables, dashboards administrativos y exportación CSV
-· Mejoras de UI/UX en flujos de cotización, pagos y logística
-· Módulo interno de mensajería; integración con APIs REST y flujos AJAX
-
-Backend:
-· APIs REST y lógica de negocio: cotizaciones, pagos, containers y logística internacional
-· Integraciones: Slack API, Mailchimp/Mandrill, Odoo ERP, AWS SES
-· Roles y permisos, procesamiento asíncrono de archivos, automatizaciones internas
-· Docker · Git · Scrum/Jira · +300 tareas completadas
+· Integración y consumo de APIs REST internas y servicios externos como Slack, Odoo ERP, Mailchimp/Mandrill y AWS SES para sincronización de datos, automatización de notificaciones y gestión de correos transaccionales
+· Automatización de procesos internos y desarrollo de lógica de negocio para cotizaciones, pagos, containers, seguimiento logístico, estados operativos y validaciones comerciales entre distintos módulos del sistema
+· Implementación de pantallas administrativas, tablas dinámicas, filtros avanzados, formularios complejos, dashboards internos y exportación de información a CSV
+· Resolución de bugs, refactors y optimización de performance sobre funcionalidades críticas utilizadas diariamente por equipos de ventas, logística y administración
+· Desarrollo y mantenimiento de funcionalidades para plataformas internas conectadas entre sí dentro de los módulos Cotizaciones, Vendedores, Pagos y Logística
+· Implementación de sistemas de roles, permisos y visualización dinámica de información según tipo de usuario, estado operativo y flujo de trabajo
+· Procesamiento asíncrono de archivos, importación masiva de datos y automatización de tareas backend orientadas a operación y mantenimiento interno
 
 Admin OroCommerce:
 · Gestión de plataforma B2B: usuarios, permisos, catálogo y contenido CMS
@@ -71,17 +67,13 @@ Stack: HTML · CSS · JS · TS · React · Next.js · React Native · Python · 
     socialLinks: "Social:",
     emonkJob: `Emonk · Full-Stack Developer · 2022 – Present
 
-Frontend:
-· Responsive development across multiple interconnected internal platforms
-· Reusable components, admin dashboards, and CSV data export
-· UI/UX improvements across quoting, payments, and logistics flows
-· Internal messaging module; REST API integration and AJAX flows
-
-Backend:
-· REST APIs and business logic: quotes, payments, container tracking, international logistics
-· Integrations: Slack API, Mailchimp/Mandrill, Odoo ERP, AWS SES
-· Role-based permissions, async file processing, and internal automation
-· Docker · Git · Scrum/Jira · 300+ tasks completed
+· Integration and consumption of internal REST APIs and external services such as Slack, Odoo ERP, Mailchimp/Mandrill, and AWS SES for data sync, notification automation, and transactional email management
+· Internal process automation and business logic for quoting, payments, container tracking, logistics monitoring, operational statuses, and commercial validations across system modules
+· Implementation of admin screens, dynamic tables, advanced filters, complex forms, internal dashboards, and CSV data export
+· Bug fixing, refactoring, and performance optimization on critical features used daily by sales, logistics, and operations teams
+· Development and maintenance of features across interconnected internal platforms within the Cotizaciones, Vendedores, Pagos, and Logística modules
+· Role and permission systems with dynamic data display based on user type, operational status, and workflow
+· Async file processing, bulk data import, and backend task automation for internal operations and maintenance
 
 OroCommerce Admin:
 · B2B platform management: users, permissions, catalog, and CMS content
