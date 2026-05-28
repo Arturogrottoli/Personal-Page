@@ -20,22 +20,30 @@ export const translations = {
     socialLinks: "RRSS:",
     emonkJob: `Emonk · Full-Stack Developer · 2022 – actualidad
 
-Desarrollo de funcionalidades en una plataforma interna multi-módulo para operaciones de comercio exterior (Quotes, Seller, Swift, Logistic) — responsabilidad completa desde el modelo de datos hasta la UI.
+Frontend:
+· Desarrollo responsive para múltiples plataformas internas interconectadas
+· Componentes reutilizables, dashboards administrativos y exportación CSV
+· Mejoras de UI/UX en flujos de cotización, pagos y logística
+· Módulo interno de mensajería; integración con APIs REST y flujos AJAX
 
-· Lógica de negocio en PHP: reglas de cotización, tipos de cambio, flujos de envío y seguimiento de containers en 4 módulos interconectados
-· Desarrollo y mantenimiento de APIs REST internas; procesamiento asíncrono de archivos y sistema de roles y permisos
-· Integración con Odoo ERP, Slack API, OroCommerce B2B y migración de email transaccional a AWS SES
-· Dashboards con exportación CSV, UIs responsivas basadas en componentes y módulo interno de mensajería
-· +300 tareas entregadas en sprints Scrum con seguimiento en Jira
+Backend:
+· APIs REST y lógica de negocio: cotizaciones, pagos, containers y logística internacional
+· Integraciones: Slack API, Mailchimp/Mandrill, Odoo ERP, AWS SES
+· Roles y permisos, procesamiento asíncrono de archivos, automatizaciones internas
+· Docker · Git · Scrum/Jira · +300 tareas completadas
+
+Admin OroCommerce:
+· Gestión de plataforma B2B: usuarios, permisos, catálogo y contenido CMS
 
 Stack: PHP · JavaScript · SQL · AJAX · Docker · Git`,
     freelanceJob: `Freelance Full-Stack Developer · 2020 – actualidad
 
-· Proyectos web a medida end-to-end: landing pages, sitios corporativos, e-commerce y apps en React/Next.js
-· Integración con APIs de terceros, automatización de formularios y flujos de pago; deploys en Vercel, Netlify y Surge
-· Manejo completo del ciclo con el cliente: relevamiento, desarrollo, iteración y soporte post-lanzamiento
+· Sitios corporativos, landing pages, e-commerce y apps web a medida
+· Proyectos en React, Next.js, Python y más según el requerimiento
+· Integración con APIs, formularios, automatizaciones y pasarelas de pago
+· Despliegue y configuración en múltiples plataformas y entornos
 
-Stack: React · Next.js · TypeScript · Tailwind CSS · REST APIs`,
+Stack: HTML · CSS · JS · TS · React · Next.js · React Native · Python · Node.js · Bootstrap · Tailwind · Firebase · PWA`,
     liramaticJob:
       "Liramatic (2021-actual) - Generación de reportes para flotas vehiculares mediante tableros Power BI.",
     codoacodoJob: "Profesor curso Full Stack Python Codo a codo (2021-2024)",
@@ -63,22 +71,30 @@ Stack: React · Next.js · TypeScript · Tailwind CSS · REST APIs`,
     socialLinks: "Social:",
     emonkJob: `Emonk · Full-Stack Developer · 2022 – Present
 
-Shipped features on a multi-module internal platform for foreign trade operations (Quotes, Seller, Swift, Logistic) — full ownership from data modeling to UI.
+Frontend:
+· Responsive development across multiple interconnected internal platforms
+· Reusable components, admin dashboards, and CSV data export
+· UI/UX improvements across quoting, payments, and logistics flows
+· Internal messaging module; REST API integration and AJAX flows
 
-· Backend business logic in PHP: pricing rules, FX rates, shipment workflows, and container tracking across 4 interconnected modules
-· Developed and maintained internal REST APIs; async file processing and role-based permission systems
-· Integrated Odoo ERP, Slack API, OroCommerce B2B, and led migration of transactional email to AWS SES
-· Built CSV export dashboards, responsive component-based UIs, and an internal messaging module
-· 300+ tasks delivered across Scrum sprints tracked in Jira
+Backend:
+· REST APIs and business logic: quotes, payments, container tracking, international logistics
+· Integrations: Slack API, Mailchimp/Mandrill, Odoo ERP, AWS SES
+· Role-based permissions, async file processing, and internal automation
+· Docker · Git · Scrum/Jira · 300+ tasks completed
+
+OroCommerce Admin:
+· B2B platform management: users, permissions, catalog, and CMS content
 
 Stack: PHP · JavaScript · SQL · AJAX · Docker · Git`,
     freelanceJob: `Freelance Full-Stack Developer · 2020 – Present
 
-· Designed and shipped custom web projects end-to-end: landing pages, corporate sites, e-commerce, and React/Next.js apps
-· Integrated third-party APIs, form automation, and payment flows; managed deployments across Vercel, Netlify, and Surge
-· Handled full client lifecycle: scoping, development, iteration, and post-launch support
+· Corporate sites, landing pages, e-commerce, and custom web apps
+· Projects in React, Next.js, Python, and more depending on requirements
+· Third-party API integrations, forms, automations, and payment flows
+· Deployment and configuration across multiple platforms and environments
 
-Stack: React · Next.js · TypeScript · Tailwind CSS · REST APIs`,
+Stack: HTML · CSS · JS · TS · React · Next.js · React Native · Python · Node.js · Bootstrap · Tailwind · Firebase · PWA`,
     liramaticJob: "Liramatic (2021-present) - Generation of reports for vehicle fleets using Power BI dashboards.",
     codoacodoJob: "Full Stack Python Course Professor at Codo a Codo (2021-2024)",
     coderhouseJob: "Professor and Tutor at Coderhouse for Web Development, JavaScript, React.js, AI Automation, Data Science, and SQL courses (2021-present)",
