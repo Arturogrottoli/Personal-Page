@@ -83,7 +83,10 @@ export default function ChatBot() {
             {isOpen && (
                 <div className={styles.chatWindow}>
                     <div className={styles.chatHeader}>
-                        <span>AG Assistant</span>
+                        <div className={styles.headerInfo}>
+                            <span className={styles.onlineDot}></span>
+                            <span>AG Assistant</span>
+                        </div>
                         <button onClick={() => setIsOpen(false)} className={styles.closeButton}>
                             <X size={20} />
                         </button>
@@ -96,8 +99,11 @@ export default function ChatBot() {
                             </div>
                         ))}
                         {isLoading && (
-                            <div className={`${styles.message} ${styles.botMessage}`}>
-                                <div className={styles.spinner}></div>
+                            <div className={`${styles.message} ${styles.botMessage} ${styles.typingMessage}`}>
+                                <span>AG Assistant está escribiendo</span>
+                                <span className={styles.typingDots}>
+                                    <span>.</span><span>.</span><span>.</span>
+                                </span>
                             </div>
                         )}
                         <div ref={messagesEndRef} />
