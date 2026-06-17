@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { MessageCircle, X, Send, User, Bot } from "lucide-react"
+import { MessageCircle, X, Send } from "lucide-react"
 import styles from "./ChatBot.module.css"
 
 interface Message {
