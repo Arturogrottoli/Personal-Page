@@ -16,6 +16,8 @@ export const translations = {
     contact: "Contacto:",
     viewProject: "Project",
     technologies: "Tecnologías:",
+    technologiesUsed: "Tecnologías utilizadas",
+    close: "Cerrar",
     career: "Trayectoria:",
     socialLinks: "RRSS:",
     emonkJob: `Emonk · Full-Stack Developer · 2022 – actualidad
@@ -41,10 +43,15 @@ Stack: PHP · JavaScript · SQL · AJAX · Docker · Git`,
 
 Stack: HTML · CSS · JS · TS · React · Next.js · React Native · Python · Node.js · Bootstrap · Tailwind · Firebase · PWA`,
     liramaticJob:
-      "Liramatic (2021-actual) - Generación de reportes para flotas vehiculares mediante tableros Power BI.",
+      "Liramatic (2021-2026) - Desarrollo de tableros Power BI para flotas vehiculares con KPIs de kilometraje, uso de vehículos y excesos de velocidad. Limpieza y modelado de datos con SQL, actualización automática de reportes y relevamiento con clientes para diseñar tableros a medida.",
     codoacodoJob: "Profesor curso Full Stack Python Codo a codo (2021-2024)",
-    coderhouseJob: "Profesor y Tutor en Coderhouse para cursos Desarrollo web, Javascript, Reactjs, AI automation, Data Science y SQL (2021-actualidad)",
+    coderhouseJob: "Profesor en Coderhouse para cursos Desarrollo web, Javascript, Reactjs, AI automation, Data Science, Data Analytics y SQL (2021-actualidad)",
     featuredProjects: "Proyectos destacados:",
+    navCareer: "Trayectoria",
+    navTech: "Tecnologías",
+    navContact: "Contacto",
+    contactTitle: "Contacto",
+    contactText: "¿Tenés una propuesta laboral o un proyecto? Escribime y charlamos.",
   },
   en: {
     title: "Hi! I'm Arturo, an IT professional with experience in programming, data analysis, telecommunications, and teaching.",
@@ -63,6 +70,8 @@ Stack: HTML · CSS · JS · TS · React · Next.js · React Native · Python · 
     contact: "Contact:",
     viewProject: "View project",
     technologies: "Technologies:",
+    technologiesUsed: "Technologies used",
+    close: "Close",
     career: "Career:",
     socialLinks: "Social:",
     emonkJob: `Emonk · Full-Stack Developer · 2022 – Present
@@ -87,10 +96,15 @@ Stack: PHP · JavaScript · SQL · AJAX · Docker · Git`,
 · Deployment and configuration across multiple platforms and environments
 
 Stack: HTML · CSS · JS · TS · React · Next.js · React Native · Python · Node.js · Bootstrap · Tailwind · Firebase · PWA`,
-    liramaticJob: "Liramatic (2021-present) - Generation of reports for vehicle fleets using Power BI dashboards.",
+    liramaticJob: "Liramatic (2021-2026) - Built Power BI dashboards for vehicle fleets with KPIs on mileage, vehicle usage and speeding. Data cleaning and modeling with SQL, automated report refreshes, and requirements gathering with clients to design custom dashboards.",
     codoacodoJob: "Full Stack Python Course Professor at Codo a Codo (2021-2024)",
-    coderhouseJob: "Professor and Tutor at Coderhouse for Web Development, JavaScript, React.js, AI Automation, Data Science, and SQL courses (2021-present)",
+    coderhouseJob: "Professor at Coderhouse for Web Development, JavaScript, React.js, AI Automation, Data Science, Data Analytics, and SQL courses (2021-present)",
     featuredProjects: "Featured projects:",
+    navCareer: "Career",
+    navTech: "Tech stack",
+    navContact: "Contact",
+    contactTitle: "Contact",
+    contactText: "Have a job opportunity or a project in mind? Get in touch.",
   },
 }
 

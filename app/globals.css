@@ -63,7 +63,8 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   text-shadow: 0 0 5px #33ff33;
-  overflow-x: hidden;
+  /* clip (y no hidden) para no romper position: sticky de la navegación */
+  overflow-x: clip;
   width: 100%;
   box-sizing: border-box;
 }

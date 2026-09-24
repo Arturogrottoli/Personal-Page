@@ -3,6 +3,14 @@ import { NextRequest, NextResponse } from "next/server"
 export const dynamic = "force-dynamic"
 
 const GROQ_API_KEY = process.env.GROQ_API_KEY
+// Se prueban en orden: si un modelo no está disponible para la cuenta, se pasa al siguiente
+const GROQ_MODELS = [
+  process.env.GROQ_MODEL,
+  "llama-3.3-70b-versatile",
+  "openai/gpt-oss-20b",
+  "llama-3.1-8b-instant",
+].filter((m, i, arr): m is string => !!m && arr.indexOf(m) === i)
+const FALLBACK_MESSAGE = "No pude responder, intentá de nuevo."
 
 const SYSTEM_PROMPT = `Sos el asistente virtual del portfolio de Arturo Grottoli. Respondé preguntas sobre su perfil profesional de manera amigable, concisa y en el idioma que te hablen (español o inglés).
 
@@ -57,12 +65,12 @@ Stack: PHP · JavaScript · SQL · AJAX · Docker · REST · Git
 - Otras herramientas: Firebase, PWA, GitHub, APIs REST
 
 ### Analista de Datos · 2021 – presente
-- Liramatic (2021 - presente): generación de reportes para flotas vehiculares usando dashboards Power BI
+- Liramatic (2021 - 2026): tableros Power BI para flotas vehiculares con KPIs de kilometraje, uso de vehículos y excesos de velocidad; limpieza y modelado de datos con SQL; actualización automática de reportes; relevamiento con clientes para diseñar tableros a medida
 - Herramientas: SQL, Python, Power BI
 
 ### Profesor y Tutor · 2021 – presente
 - Codo a Codo (2021 - 2024): profesor del curso Full Stack Python
-- Coderhouse (2021 - presente): tutor de Desarrollo Web, JavaScript, React.js, AI Automation, Data Science y SQL
+- Coderhouse (2021 - presente): profesor de Desarrollo Web, JavaScript, React.js, AI Automation, Data Science, Data Analytics y SQL
 
 ### Profesional de Telecomunicaciones · 2014 – 2020
 - BOOT ARGENTINA (2014 - 2018) y SOTO COMUNICACIONES (2018 - 2020)
@@ -153,7 +161,7 @@ export async function POST(req: NextRequest) {
 
     if (!GROQ_API_KEY) {
       return NextResponse.json(
-        { message: "No pude responder, intentá de nuevo." },
+        { message: FALLBACK_MESSAGE },
         { status: 500 }
       )
     }
@@ -165,42 +173,45 @@ export async function POST(req: NextRequest) {
       })
     )
 
-    const response = await fetch(
-      "https://api.groq.com/openai/v1/chat/completions",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${GROQ_API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
-          messages: [{ role: "system", content: SYSTEM_PROMPT }, ...conversationMessages],
-          max_tokens: 250,
-          temperature: 0.3,
-        }),
-      }
-    )
-
-    let data: any
-    try {
-      data = await response.json()
-    } catch {
-      const raw = await response.text().catch(() => "")
-      console.error("Groq returned non-JSON:", response.status, raw)
-      return NextResponse.json(
-        { message: "No pude responder, intentá de nuevo." },
-        { status: 500 }
+    for (const model of GROQ_MODELS) {
+      const response = await fetch(
+        "https://api.groq.com/openai/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${GROQ_API_KEY}`,
+          },
+          body: JSON.stringify({
+            model,
+            messages: [{ role: "system", content: SYSTEM_PROMPT }, ...conversationMessages],
+            max_tokens: 250,
+            temperature: 0.3,
+          }),
+        }
       )
+
+      const raw = await response.text()
+      let data: any
+      try {
+        data = JSON.parse(raw)
+      } catch {
+        console.error("Groq returned non-JSON:", response.status, raw)
+        break
+      }
+
+      const text = data?.choices?.[0]?.message?.content
+      if (text) {
+        return NextResponse.json({ message: text })
+      }
+
+      // El detalle del error queda en los logs del servidor, no se le muestra al visitante
+      console.error(`Groq error (model ${model}):`, response.status, data?.error)
+      // Solo tiene sentido probar otro modelo si el problema es el modelo
+      if (data?.error?.code !== "model_not_found" && response.status !== 404) break
     }
 
-    const text = data?.choices?.[0]?.message?.content
-    const apiErrorMessage =
-      typeof data?.error?.message === "string" ? data.error.message : undefined
-
-    return NextResponse.json({
-      message: text || apiErrorMessage || "No pude responder, intentá de nuevo.",
-    })
+    return NextResponse.json({ message: FALLBACK_MESSAGE }, { status: 502 })
   } catch (error) {
     console.error("Error:", error)
     return NextResponse.json({ error: "Error interno" }, { status: 500 })
