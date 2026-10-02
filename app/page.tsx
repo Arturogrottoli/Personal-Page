@@ -27,6 +27,10 @@ import {
   siNodedotjs,
   siDocker,
   siAngular,
+  siTelegram,
+  siGooglegemini,
+  siMake,
+  siGooglesheets,
 } from "simple-icons"
 
 interface IconType {
@@ -50,6 +54,25 @@ const TechIcon = ({ icon, name, compact = false }: { icon: IconType; name: strin
 
 const portfolioItems = [
 
+    {
+      title: "Diario de Proyección",
+      description: "Self-maintaining movie diary that mixes AI automation and data science.",
+      image: "/portfolio/turimoviesdatabase.png",
+      link: "https://turimoviesdatabase.vercel.app/",
+      repo: "https://github.com/Arturogrottoli/IA-Automation-Movies",
+      details: {
+        es: "Proyecto integrador del curso IA Automation (Coderhouse): un diario de cine personal que se mantiene solo. Le escribís el nombre de una película a un bot de Telegram, Google Gemini completa director, año, país y género, y Make orquesta todo el flujo hasta guardar la fila en una hoja de Google que alimenta el sitio en vivo. Combina tres capas: automatización con IA (bot, clasificación de intención, extracción de datos, recomendaciones), ciencia de datos (perfil de gusto hecho con Python, pandas y scikit-learn: clustering, similitud por embeddings y un recomendador que compara dos métodos) y programación (frontend en Angular, desplegado en Vercel). Construido sobre casi 1.300 películas registradas desde 2018.",
+        en: "Capstone project for the IA Automation course (Coderhouse): a self-maintaining personal movie diary. You send a movie title to a Telegram bot, Google Gemini fills in director, year, country and genre, and Make orchestrates the whole flow until the row lands in a Google Sheet that feeds the live site. It blends three layers: AI automation (bot, intent classification, data extraction, recommendations), data science (a taste profile built with Python, pandas and scikit-learn — clustering, embedding-based similarity and a recommender comparing two methods) and programming (Angular frontend, deployed on Vercel). Built on top of almost 1,300 movies logged since 2018.",
+      },
+      technologies: [
+        { icon: siTelegram, name: "Telegram" },
+        { icon: siGooglegemini, name: "Gemini" },
+        { icon: siMake, name: "Make" },
+        { icon: siGooglesheets, name: "Google Sheets" },
+        { icon: siPython, name: "Python" },
+        { icon: siAngular, name: "Angular" },
+      ],
+    },
     {
       title: "Corazon Verde",
       description: "Farm-raised chickens raised naturally",
