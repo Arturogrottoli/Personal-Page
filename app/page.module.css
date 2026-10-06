@@ -860,6 +860,7 @@
 
 .modalDescription {
   margin: 0;
+  white-space: pre-line;
   color: #fff;
   line-height: 1.5;
 }

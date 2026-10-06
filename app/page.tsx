@@ -31,6 +31,8 @@ import {
   siGooglegemini,
   siMake,
   siGooglesheets,
+  siPandas,
+  siScikitlearn,
 } from "simple-icons"
 
 interface IconType {
@@ -56,13 +58,13 @@ const portfolioItems = [
 
     {
       title: "Diario de Proyección",
-      description: "Self-maintaining movie diary that mixes AI automation and data science.",
+      description: "AI engineering, data analysis and machine learning project: a self-updating movie diary.",
       image: "/portfolio/turimoviesdatabase.png",
       link: "https://turimoviesdatabase.vercel.app/",
       repo: "https://github.com/Arturogrottoli/IA-Automation-Movies",
       details: {
-        es: "Un diario de cine personal que se mantiene solo, pensado a propósito para mostrar cómo combino automatización con IA, ciencia de datos y desarrollo en un mismo proyecto. Le escribís el nombre de una película a un bot de Telegram, Google Gemini completa director, año, país y género, y Make orquesta todo el flujo hasta guardar la fila en una hoja de Google que alimenta el sitio en vivo. Combina tres capas: automatización con IA (bot, clasificación de intención, extracción de datos, recomendaciones), ciencia de datos (perfil de gusto hecho con Python, pandas y scikit-learn: clustering, similitud por embeddings y un recomendador que compara dos métodos) y programación (frontend en Angular, desplegado en Vercel). Construido sobre casi 1.300 películas registradas desde 2018.",
-        en: "A self-maintaining personal movie diary, built on purpose to show how I combine AI automation, data science and development in a single project. You send a movie title to a Telegram bot, Google Gemini fills in director, year, country and genre, and Make orchestrates the whole flow until the row lands in a Google Sheet that feeds the live site. It blends three layers: AI automation (bot, intent classification, data extraction, recommendations), data science (a taste profile built with Python, pandas and scikit-learn — clustering, embedding-based similarity and a recommender comparing two methods) and programming (Angular frontend, deployed on Vercel). Built on top of almost 1,300 movies logged since 2018.",
+        es: "Proyecto de AI engineering, análisis de datos y machine learning, con frontend en Angular: un diario de cine personal que se actualiza solo, construido sobre casi 1.300 películas registradas desde 2018.\n\n· AI engineering: le escribís el nombre de una película a un bot de Telegram; Google Gemini clasifica la intención, completa director, año, país y género y genera recomendaciones. Make orquesta el flujo y guarda cada registro en Google Sheets.\n· Análisis de datos y machine learning: perfil de gusto hecho con Python, pandas y scikit-learn, con clustering, similitud por embeddings y un recomendador que compara dos métodos.\n· Frontend: sitio en Angular desplegado en Vercel, que se alimenta en vivo de la hoja.",
+        en: "An AI engineering, data analysis and machine learning project with an Angular frontend: a self-updating personal movie diary, built on almost 1,300 movies logged since 2018.\n\n· AI engineering: you send a movie title to a Telegram bot; Google Gemini classifies the intent, fills in director, year, country and genre, and generates recommendations. Make orchestrates the flow and saves each entry to Google Sheets.\n· Data analysis and machine learning: a taste profile built with Python, pandas and scikit-learn, with clustering, embedding-based similarity and a recommender that compares two methods.\n· Frontend: Angular site deployed on Vercel, fed live from the sheet.",
       },
       technologies: [
         { icon: siTelegram, name: "Telegram" },
@@ -70,6 +72,8 @@ const portfolioItems = [
         { icon: siMake, name: "Make" },
         { icon: siGooglesheets, name: "Google Sheets" },
         { icon: siPython, name: "Python" },
+        { icon: siPandas, name: "pandas" },
+        { icon: siScikitlearn, name: "scikit-learn" },
         { icon: siAngular, name: "Angular" },
       ],
     },
