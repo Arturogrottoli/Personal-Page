@@ -69,7 +69,7 @@ Stack: PHP · JavaScript · SQL · AJAX · Docker · REST · Git
 - Herramientas: SQL, Python, Power BI
 
 ### Profesor y Tutor · 2021 – presente
-- Codo a Codo (2021 - 2024): profesor del curso Full Stack Python
+- Codo a Codo, programa del Gobierno de la Ciudad de Buenos Aires (2021 - 2024): profesor de Full Stack Python
 - Coderhouse (2021 - presente): profesor de Desarrollo Web, JavaScript, React.js, AI Automation, Data Science, Data Analytics y SQL
 
 ### Profesional de Telecomunicaciones · 2014 – 2020
